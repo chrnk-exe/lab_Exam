@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google message</title>
+    <style>
+        .message {
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            box-sizing: border-box;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            max-width: 70%;
+            margin: auto;
+            padding-block: 40px;
+            padding-inline: 0px;
+        }
+
+        .message .logo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        
+        .message .content {
+            text-align: left;
+            margin-inline: 35px;
+        }
+        
+        .message .content h2 {
+            text-align: center;
+            display: block;
+            border-bottom: 1px solid lightgrey;
+            padding-bottom: 5px;
+            font-weight: 400;
+        }
+        
+        .message form {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .message form input[type="submit"] {
+            margin: auto;
+            font-size: 1.1em;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            transition: all .2s ease-in-out;
+        }
+        
+        .message ul {
+            list-style-type: disc;
+        }
+        
+        .message .footer {
+            margin-top: 10px;
+            text-align: left;
+            margin-inline: 35px;
+        }
+    </style>
+</head>
+<body>
+    		<div class="message">
+			<header class="logo">
+				<img src="GoogleMessage.png" height="45" alt="Google Logo PNG" />
+			</header>
+			<main class="content">
+				<div>
+					<h2>
+						Someone has specified admin@hacktory.com as a backup
+						email address
+					</h2>
+					<p>
+						User <strong>someuser@gmail.com</strong> wants use your
+						email address as reserve. If this is not your account,
+						someone may entered your email address by mistake. You
+						can remove it from this account.
+					</p>
+					<form action='#'>
+						<input
+							class="submitButton"
+							type='submit'
+							value='Disable address'
+						/>
+					</form>
+					<p>
+						You can also view security related activities on this
+						page:
+						<a href='#'>
+							https://myaccount.google.com/notifications
+						</a>
+					</p>
+				</div>
+			</main>
+			<footer class="footer">
+				<em></em>
+			</footer>
+		</div>
+</body>
+</html>

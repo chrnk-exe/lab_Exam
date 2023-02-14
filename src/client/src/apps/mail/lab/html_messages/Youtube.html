@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Message</title>
+    <style>
+        .message {
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            box-sizing: border-box;
+        }
+        
+        .message .logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: calc(100% - 60px);
+            margin-left: 60px;
+        }
+        
+        .message .content {
+            font-size: 1.5em;
+            width: calc(100% - 120px);
+            margin-inline: 60px;
+            text-align: left;
+        }
+        
+        .message .content p {
+            margin-block: 0;
+        }
+        
+        .message .content h3 {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        
+        .message .content .ChannelName {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: max-content;
+            background-color: #FFFFF1;
+            padding: 15px;
+            padding-block: 10px;
+            box-sizing: border-box;
+            border-radius: 35px;
+            margin-left: 35px;
+            cursor: pointer;
+        }
+        
+        .message .content .ChannelName img {
+            border-radius: 50%;
+        }
+        
+        .message .content .ChannelName p {
+            margin: 0;
+            padding: 0;
+            margin-left: 10px;
+        }
+        
+        .message .content .subtext {
+            box-sizing: border-box;
+            margin-top: 10px;
+            font-size: 0.8em;
+        }
+        
+        .message .footer {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <header class="logo">
+            <img src="Youtube.png" height="100" alt="Youtube Logo PNG" />
+        </header>
+        <main class="content">
+            <p>
+                <p>Hello <a href='#'>admin@hacktory.com</a>!</p>
+                <p>Your favorite YouTube channel has released a new video
+                today!</p>
+            </p>
+            <br />
+            <h3>Your favorite channel is</h3>
+            <div class="ChannelName">
+                <img src="Hacktory.jpg" height={60} width={60} alt="" />
+                <p>Hacktory</p>
+            </div>
+            <div class="subtext">
+                If the link in the picture doesn't work, click
+                <a href='#'>here</a>.
+            </div>
+        </main>
+        <footer class="footer">Sincerely, YouTube team</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail ru message</title>
+    <style>
+        .message {
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+        }
+        
+        .message .logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            font-size: 1.3em;
+            box-sizing: border-box;
+            width: 100%;
+            padding-inline: 40px;
+            background-color: lightgrey;
+            border-radius: 5px 5px 0px 0px;
+        }
+        
+        .message .content {
+            text-align: left;
+            margin-inline: 35px;
+        }
+        
+        .message ul {
+            list-style-type: disc;
+        }
+        
+        .message ul li {
+            margin-top: 10px;
+        }
+        
+        .message .footer {
+            border-top: 1px solid lightgrey;
+            margin-top: 10px;
+            text-align: left;
+            padding-inline: 35px;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    		<div class="message">
+			<header class="logo">
+				<p>
+					Log in form a new devise to your acount admin@hacktory.com
+				</p>
+				<img src="mailrumessage.png" height="65" alt="MailRu Logo SVG" />
+			</header>
+			<main class="content">
+				<div>
+					<p>
+						To the account admin@hacktory.com loged in from a new
+						devise.
+					</p>
+					<p>
+						If you haven't done it,
+						<a href='http://attacker.tk'>change your password</a> to secure your
+						account.
+					</p>
+					<ul>
+						<li>Time: today at 03:18</li>
+						<li>
+							Devise: Microsoft Windows 10, Chromium,
+							Saint-Petersburg, Russia
+						</li>
+					</ul>
+					<p>
+						Learn how to secure your account on our
+						<a href='#'>security site</a>.
+					</p>
+				</div>
+			</main>
+			<footer class="footer">
+				<p>
+					<em>
+						You received this email because you are a user Mail.ru
+						based on the <a href='#'>User Agreement</a>.
+					</em>
+				</p>
+				<p>
+					<em>
+						Copyright 2022 Mail.ru Group, Moscow — All rights
+						reserved.
+					</em>
+				</p>
+				<em>Mail ID Support Service</em>
+			</footer>
+		</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+.message
+    display: flex
+    flex-direction: column
+    overflow-y: scroll
+    box-sizing: border-box
+
+    .logo 
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        width: calc(100% - 60px)
+        margin-left: 60px
+    .content
+        font-size: 1.5em
+        width: calc(100% - 120px)
+        margin-inline: 60px
+        text-align: left
+
+        p
+            margin-block: 0
+
+        h3 
+            margin: 0
+            margin-bottom: 10px
+            // padding: 0
+
+        .ChannelName
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            width: max-content
+            background-color: #FFFFF1
+            padding: 15px
+            padding-block: 10px
+            box-sizing: border-box
+            border-radius: 35px
+            margin-left: 35px
+            cursor: pointer
+
+            img 
+                border-radius: 50%
+            p
+                margin: 0
+                padding: 0
+                margin-left: 10px
+
+        .subtext
+            box-sizing: border-box
+            margin-top:10px
+            // margin-inline: 35px
+            // width: calc(100% - 70px)
+            font-size: 0.8em
+
+    .footer
+        margin-top: 40px
