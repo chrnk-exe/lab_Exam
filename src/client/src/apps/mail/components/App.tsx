@@ -43,22 +43,22 @@ function App() {
 		case AppActions.Compose:
 			break;
 		case AppActions.Inbox:
-			navigate('/app');
+			navigate('/app/mail/app');
 			break;
 		case AppActions.Favorites:
-			navigate('/app/favorite');
+			navigate('/app/mail/app/favorite');
 			break;
 		case AppActions.Drafts:
-			navigate('/app/drafts');
+			navigate('/app/mail/app/drafts');
 			break;
 		case AppActions.Sent:
-			navigate('/app/sent');
+			navigate('/app/mail/app/sent');
 			break;
 		case AppActions.Spam:
-			navigate('/app/spam');
+			navigate('/app/mail/app/spam');
 			break;
 		case AppActions.Trash:
-			navigate('/app/trash');
+			navigate('/app/mail/app/trash');
 			break;
 		default:
 			break;
