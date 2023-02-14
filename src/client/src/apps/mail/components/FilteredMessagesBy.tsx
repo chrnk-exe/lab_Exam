@@ -11,8 +11,6 @@ const FilteredMessagesBy = ({
 	messages: Message[];
 }) => {
 
-	console.log(messages.filter(message => message.favorite).length);
-
 	if (filterArg === 'favorite') {
 		return (
 			<section id={classes.messages}>

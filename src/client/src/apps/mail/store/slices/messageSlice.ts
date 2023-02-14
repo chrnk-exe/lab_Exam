@@ -6,7 +6,7 @@ import byField from '../../byField';
 const initialState: Message[] = [...mockupMessages].sort(byField<Message>('date'));
 
 export const messagesSlice = createSlice({
-	name: 'messages',
+	name: 'messages1',
 	initialState,
 	reducers: {
 		setMessages: (state, action: PayloadAction<Message[]>) => {

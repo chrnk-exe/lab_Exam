@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadHunter Message</title>
+    <style>
+		.message {
+			display: flex;
+			flex-direction: column;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+		}
+		
+		.message .logo {
+			display: flex;
+			justify-content: flex-start;
+			width: 100%;
+			box-sizing: border-box;
+			padding-left: 40px;
+		}
+		
+		.message .content {
+			text-align: left;
+			margin-inline: 35px;
+		}
+		
+		.message .content .CVWrapper {
+			background-color: #eee;
+			padding: 10px 20px;
+		}
+		
+		.message .content .CV {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: column;
+			padding: 10px;
+			background-color: #FFF;
+		}
+		
+		.message .content .CV .CVHeader {
+			align-self: center;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.message .content .CV .avatar {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			margin-block: 10px;
+		}
+		
+		.message .content .CV .avatar h1,
+		.message .content .CV .avatar h2,
+		.message .content .CV .avatar h3 {
+			padding: 0;
+			margin: 0;
+		}
+		
+		.message .content .CV .avatar img {
+			height: 60px;
+			margin-right: 10px;
+		}
+		
+		.message .content .CV .informationRow {
+			display: grid;
+			grid-template-columns: 2fr 5fr;
+			width: 100%;
+		}
+		
+		.message .content .CV .informationCell {
+			padding: 10px;
+			border: 1px solid lightgrey;
+		}
+		
+		.message .footer {
+			margin-top: 10px;
+			text-align: left;
+			margin-inline: 35px;
+		}
+    </style>
+</head>
+<body>
+    <div class="message">
+			<header class="logo">
+				<img src="hh-red_logo.png" height="65" alt="HH Logo PNG" />
+			</header>
+			<main class="content">
+				<div>
+					<p>Hello, dear employer!</p>
+					<p>
+						You have received a new response to your vacancy on 
+						<a href="#">hh.ru</a>!
+					</p>
+					<p>
+						User <a href="#">Hide The Pain Harold</a> responded to
+						your vacancy <a>Python developer</a>
+					</p>
+					<div class="CVWrapper">
+						<div class="CV">
+							<h1 class="CVHeader">CV</h1>
+							<div class="avatar">
+								<img
+									src="hidethepainharold.jpg"
+									alt="Harold Avatar"
+								/>
+								<div>
+									<h2>Hello, dear HR! My name is Harold!</h2>
+									<h3>Python Developer</h3>
+								</div>
+							</div>
+							<div class="informationRow">
+								<div class="informationCell">
+									Address
+								</div>
+								<div class="informationCell">
+									Saint Petersburg, Nevsky Prospekt 15
+								</div>
+							</div>
+							<div class="informationRow">
+								<div class="informationCell">
+									Telephone
+								</div>
+								<div class="informationCell">
+									8 (888) 888 88 88
+								</div>
+							</div>
+							<div class="informationRow">
+								<div class="informationCell">
+									Email
+								</div>
+								<div class="informationCell">
+									harold@gmail.com
+								</div>
+							</div>
+							<div class="informationRow">
+								<div class="informationCell">
+									Personal information
+								</div>
+								<div class="informationCell">
+									<ul>
+										<li>
+											Education: MIT (September 1996-June
+											2002)
+										</li>
+										<li>
+											Languages: English, Russian, Germany
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="informationRow">
+								<div class="informationCell">
+									Work experience:
+								</div>
+								<div class="informationCell">
+									<ul>
+										<li>C/С++ Developer (2002-2008)</li>
+										<li>Project Manager (2008-2012)</li>
+										<li>Front-end developer (2013-2019)</li>
+										<li>HR in Joogle company (2020)</li>
+										<li>Back-end developer (Django)</li>
+									</ul>
+								</div>
+							</div>
+							<div class="informationRow">
+								<div class="informationCell">
+									Skills
+								</div>
+								<div class="informationCell">
+									<ul>
+										<li>Python (Django) and Jinja2</li>
+										<li>JavaScript (React, Swelte)</li>
+										<li>OOP</li>
+										<li>RESPful API, GraphQL</li>
+										<li>
+											Experience with MongoDB, PostgreSQL
+										</li>
+										<li>PHP (Basic Laravel)</li>
+										<li>Git</li>
+										<li>Jira</li>
+										<li>Agile, Kanban, Scrum</li>
+									</ul>
+								</div>
+							</div>
+							<div class="informationRow">
+								<div class="informationCell">
+									About me
+								</div>
+								<div class="informationCell">
+									<p>
+										A developer with extensive experience
+										working on various projects,
+										participated in many significant events
+										for IT, was the director of Joogle, I
+										decided to change my occupation and take
+										up programming in Python, since the
+										philosophy of this language is very
+										close to my philosophy and I get great
+										pleasure from writing code in this
+										language. I have been involved in
+										various projects on Flask and Django for
+										more than a year, I hope I can meet your
+										needs and join the team!
+									</p>
+									<p>
+										I sent the test task along with this CV!
+										I have a lot of vacancies in mind, but I
+										look forward to long-term cooperation in
+										your company, so I ask for a speedy
+										response!
+									</p>
+									<p>
+										I also ask you to look at my
+										<a
+											href="http://evilattacker.tk">
+											Github
+										</a>
+										, there are many interesting projects
+										there!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="footer">
+				<em>© HeadHunter, 2000–2022</em>
+			</footer>
+		</div>
+</body>
+</html>

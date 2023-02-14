@@ -3,11 +3,18 @@ import appSlice from './slices/appSlice';
 import userReducer from '../apps/mail/store/slices/userSlice';
 import messagesReducer from '../apps/mail/store/slices/messageSlice';
 
+import userFilesReducer from '../apps/files/store/slices/userSlice';
+import messagesFilesReducer from '../apps/files/store/slices/messageSlice';
+
 export const store = configureStore({
 	reducer: {
 		app: appSlice,
+
 		user: userReducer,
 		messages: messagesReducer,
+
+		userFiles: userFilesReducer,
+		messagesFiles: messagesFilesReducer,
 	}, 
 	middleware: [
 		...getDefaultMiddleware({

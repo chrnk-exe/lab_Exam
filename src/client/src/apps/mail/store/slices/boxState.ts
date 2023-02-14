@@ -4,7 +4,7 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 export const initialState: BoxState = 'inbox' as BoxState;
 
 export const boxSlice = createSlice({
-	name: 'box',
+	name: 'box1',
 	initialState,
 	reducers: {
 		setBox: (state: BoxState, action: PayloadAction<BoxState>) => {

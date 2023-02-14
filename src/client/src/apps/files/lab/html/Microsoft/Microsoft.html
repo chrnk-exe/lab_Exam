@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Terms of Use!</title>
+    <style>
+        .message {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            border-radius: 5px;
+            padding-inline: 40px;
+        }
+        
+        .message .logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1.2em;
+            box-sizing: border-box;
+            width: 100%;
+            color: #FFFFF1;
+            background-color: #0078D4;
+            padding: 20px 40px;
+            margin-top: 10px;
+        }
+        
+        .message .logo h2 {
+            font-weight: 400;
+            text-align: center;
+        }
+        
+        .message .content {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        
+        .message .content h2 {
+            font-weight: 400;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 0;
+        }
+        
+        .message ul {
+            list-style-type: disc;
+        }
+        
+        .message ul li {
+            margin-top: 10px;
+        }
+        
+        .message .footer {
+            background-color: lightgrey;
+            margin-top: 10px;
+            text-align: left;
+            padding-inline: 35px;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .message .footer div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+        
+        .message .footer div p,
+        .message .footer div a {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .message .footer div a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div className='message'>
+        <img src='microsoft_message.png' height='45' width='200' alt="Microsoft Logo SVG" />
+        <header className='logo'>
+            <h2>The agreement on the use of the service becomes clearer</h2>
+        </header>
+        <main className='content'>
+            <h2>Hello!</h2>
+            <p>
+                You have received this email because we are updating the
+                Microsoft Services Agreement applicable to the Microsoft
+                products or services that you use. We add explanations to
+                some provisions so that they are understandable to users. In
+                addition, the updated agreement will apply to new Microsoft
+                products, services and features.
+            </p>
+            <p>
+                The Microsoft Services Agreement is an agreement between you
+                and Microsoft Corporation, which regulates the use of
+                Microsoft web products and services.
+            </p>
+            <p>
+                You can read the Agreement on the use of Microsoft services
+                <a href="#">here</a>, as well as the file with the updated
+                Agreement was sent in attachments with this email. You can
+                also find out more about these changes on the FAQ page
+                <a href="#">here</a>, including a brief overview of the most
+                important ones, which will also be included in the
+                attachments.
+            </p>
+            <p>
+                If you do not agree to these terms, you can stop using our
+                products and services and close your Microsoft account
+                before they take effect. If you are a parent or guardian,
+                you are responsible for how your child uses Microsoft
+                products and services, including their purchases.
+            </p>
+            <p>Thank you for using Microsoft products and services!</p>
+        </main>
+        <footer className='footer'>
+            <div>
+                <p>This message is sent automatically.</p>
+                <a href="#">Privacy Statement</a>
+            </div>
+            <p>
+                Microsoft Corporation, O‍ne Mi‍crosoft Wa‍y, Redm‍ond, WA
+                98052 U‍SA
+            </p>
+            <img src='microsoft_message.png' height='45' width='200' alt="Microsoft Logo SVG" />
+        </footer>
+    </div>
+</body>
+</html>

@@ -9,7 +9,7 @@ export const initialState: User = (JSON.parse(
 };
 
 export const userSlice = createSlice({
-	name: 'user',
+	name: 'user1',
 	initialState,
 	reducers: {
 		setUser: (state, action: PayloadAction<User>) => {

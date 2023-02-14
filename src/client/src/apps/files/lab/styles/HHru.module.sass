@@ -1,0 +1,68 @@
+.message
+    display: flex
+    flex-direction: column
+    // overflow-y: scroll
+    box-sizing: border-box
+    margin-bottom: 20px
+    
+    .logo
+        display: flex
+        justify-content: flex-start
+        width: 100%
+        box-sizing: border-box
+        padding-left: 40px
+
+    .content
+        text-align: left
+        margin-inline: 35px
+
+        .subtext
+            font-size: 0.9em
+
+        .CVWrapper
+            background-color: #eee
+            padding: 10px 20px
+
+        .CV
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            flex-direction: column
+            padding: 10px
+            background-color: #FFF
+
+            .CVHeader
+                align-self: center
+                margin: 0
+                padding: 0
+
+            .avatar 
+                display: flex
+                justify-content: space-around
+                align-items: center
+                margin-block: 10px
+
+                h1, h2, h3
+                    padding: 0
+                    margin: 0
+
+                img
+                    // border-radius: 100%
+                    height: 60px
+                    margin-right: 10px
+                    // width: 50px
+
+            .informationRow
+                display: grid
+                grid-template-columns: 2fr 5fr
+                width: 100%
+                
+            .informationCell
+                padding: 10px
+                border: 1px solid lightgrey
+
+    
+    .footer
+        margin-top: 10px
+        text-align: left
+        margin-inline: 35px

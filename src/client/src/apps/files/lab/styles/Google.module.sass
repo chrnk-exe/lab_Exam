@@ -1,0 +1,101 @@
+.message
+    display: flex
+    flex-direction: column
+    // overflow-y: scroll
+    box-sizing: border-box
+    border: 1px solid lightgrey
+    border-radius: 5px
+    max-width: 70%
+    margin: auto
+    padding-block: 40px
+    padding-inline: 0px
+
+    margin-bottom: 20px
+
+    .logo
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+
+        p
+            font-size: 0.9em
+
+        div
+            padding-inline: 20px
+
+    .content
+        text-align: left
+        // margin-inline: 35px
+
+        .chronoButton
+            display: block
+            cursor: pointer
+            background-color: #4285F4
+            color: #fffff1
+            padding: 10px 20px
+            border-radius: 25px
+            text-align: center
+            margin-inline: 35px
+
+        .settings
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+            text-align: center
+            border-top: 1px solid lightgrey
+            margin-top: 20px
+            padding-inline: 35px
+
+            p
+                font-size: 0.9em
+
+            .chronoButton
+                width: calc(100% - 50px)
+                margin-inline: 35px
+
+            .links
+                display: flex
+                justify-content: space-evenly
+                align-items: center
+                gap: 20px
+
+        h2
+            text-align: center
+            display: block
+            border-bottom: 1px solid lightgrey
+            padding-bottom: 5px
+            font-weight: 400
+
+    form
+        display: flex
+        justify-content: center 
+        input[type="submit"]
+            margin: auto
+            font-size: 1.1em
+            padding: 10px
+            border: none
+            border-radius: 5px
+            transition: all .2s ease-in-out
+
+
+    ul
+        list-style-type: disc
+    
+    .footer
+        margin-top: 10px
+        text-align: left
+        padding-inline: 35px
+        padding-top: 10px
+        font-size: .9em
+        border-top: 1px solid lightgrey
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        gap: 10px
+        text-align: center
+
+        p
+            margin-block: 0
