@@ -37,3 +37,4 @@ declare interface ScriptRoot {
 	variants: string;
 	scripts: Script[];
 }
+

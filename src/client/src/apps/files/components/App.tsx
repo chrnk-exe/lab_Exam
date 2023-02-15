@@ -43,7 +43,6 @@ function App() {
 		{action: AppActions.Trash, icon: <DeleteIcon />, text: 'Trash'},
 		{action: AppActions.Spam, icon: <ThumbDownAltIcon />, text: 'Spam'},
 		{action: AppActions.Drafts, icon: <DraftsIcon />, text: 'Drafts'},
-	
 	];
 
 	const handleListItemClick = (

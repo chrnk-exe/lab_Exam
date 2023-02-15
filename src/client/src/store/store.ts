@@ -1,10 +1,20 @@
 import { configureStore, ThunkAction, Action, getDefaultMiddleware } from '@reduxjs/toolkit';
 import appSlice from './slices/appSlice';
+
 import userReducer from '../apps/mail/store/slices/userSlice';
 import messagesReducer from '../apps/mail/store/slices/messageSlice';
 
 import userFilesReducer from '../apps/files/store/slices/userSlice';
 import messagesFilesReducer from '../apps/files/store/slices/messageSlice';
+
+import userVishingReducer from '../apps/vishing/store/slices/userSlice';
+import scriptVishingReducer from '../apps/vishing/store/slices/scriptSlice';
+
+import labDinnerReducer from '../apps/dinner/store/slices/labSlice';
+import scriptDinnerReducer from '../apps/dinner/store/slices/scriptSlice';
+
+import labCheckpointReducer from '../apps/checkpoint/store/slices/labSlice';
+import scriptCheckpointReducer from '../apps/checkpoint/store/slices/scriptSlice';
 
 export const store = configureStore({
 	reducer: {
@@ -15,6 +25,15 @@ export const store = configureStore({
 
 		userFiles: userFilesReducer,
 		messagesFiles: messagesFilesReducer,
+
+		userVishing: userVishingReducer,
+		scriptVishing: scriptVishingReducer,
+
+		labDinner: labDinnerReducer,
+		scriptDinner: scriptDinnerReducer,
+
+		labCheckpoint: labCheckpointReducer,
+		scriptCheckpoint: scriptCheckpointReducer
 	}, 
 	middleware: [
 		...getDefaultMiddleware({
