@@ -8,10 +8,10 @@ interface Props {
     sx?: Record<string, string | number>
 }
 
-const ChangeLanguageButton: FC<Props> = (props) => {
-	const [language, setLanguage] = useState<'en' | 'ru'>('en');
-	const { i18n } = useTranslation('translation', { keyPrefix: 'checkpoint.menu' });
 
+const ChangeLanguageButton: FC<Props> = (props) => {
+	const { i18n } = useTranslation('translation', { keyPrefix: 'checkpoint.menu' });
+	const [language, setLanguage] = useState<'en' | 'ru'>(i18n.language as 'en' | 'ru');
 	const changeLanguage = (language: 'en' | 'ru') => {
 		setLanguage(language);
 		i18n.changeLanguage(language);

@@ -9,9 +9,8 @@ interface Props {
 }
 
 const ChangeLanguageButton: FC<Props> = (props) => {
-	const [language, setLanguage] = useState<'en' | 'ru'>('en');
 	const { i18n } = useTranslation('translation', { keyPrefix: 'dinner.menu' });
-
+	const [language, setLanguage] = useState<'en' | 'ru'>(i18n.language as 'en' | 'ru');
 	const changeLanguage = (language: 'en' | 'ru') => {
 		setLanguage(language);
 		i18n.changeLanguage(language);

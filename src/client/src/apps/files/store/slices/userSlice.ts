@@ -8,7 +8,6 @@ export const initialState: User = (JSON.parse(
 	password: undefined,
 };
 
-console.log('[STORE_FILES]: ', window.sessionStorage.getItem('user2'));
 export const userSlice = createSlice({
 	name: 'user2',
 	initialState,

@@ -11,22 +11,19 @@ import {useAppSelector} from '../store/hooks';
 import Message from '../apps/mail/components/Message';
 import FilteredMessagesBy from '../apps/mail/components/FilteredMessagesBy';
 import boxStates from '../apps/mail/boxStates';
-import Login from '../apps/mail/components/Login';
 import MailApp from '../apps/mail/components/App';
 import theme from '../apps/mail/styles/theme';
 
 
 // Second Lab Components
 import MessageFiles from '../apps/files/components/Message';
-import LoginFiles from '../apps/files/components/Login';
 import themeFiles from '../apps/files/styles/theme';
 import FilesApp from '../apps/files/components/App';
 import FilesFilteredMessagesBy from '../apps/files/components/FilteredMessagesBy';
 import boxStatesFiles from '../apps/files/boxStates';
-import Contacts from '../apps/vishing/components/Contacts';
+// import Contacts from '../apps/vishing/components/Contacts';
 
 // Third Lab Components
-import VishingLogin from '../apps/vishing/components/Login';
 import VishingDashboard from '../apps/vishing/components/Dashboard';
 import VishingApp from '../apps/vishing/components/App';
 import VishingContacts from '../apps/vishing/components/Contacts';
@@ -48,19 +45,9 @@ import Notes from '../apps/checkpoint/components/Notes';
 import CheckpointTheme from '../apps/checkpoint/styles/theme';
 
 const MainRoutes = () => {
-	const isAuthorized1stLab = window.sessionStorage.getItem('user1');
-	const userMail = useAppSelector(state => state.user);
 	const messagesMail = useAppSelector(state => state.messages);
-
-	const isAuthorized2ndLab = window.sessionStorage.getItem('user2');
-	const userFiles = useAppSelector(state => state.userFiles);
 	const messagesFiles = useAppSelector(state => state.messagesFiles);
-
-	// const isAuthorized3rdLab = window.sessionStorage.getItem('user3');
-	const userVishing = useAppSelector(state => state.userVishing);
-
 	const isStarted = useAppSelector(state => state.labDinner);
-	console.log('IS STARTED: ', isStarted);
 	const [time, subTime, isReversed] = useTimer(3600, !isStarted);
 
 	return (
@@ -82,26 +69,14 @@ const MainRoutes = () => {
 				<Route
 					path={'/app/mail'}
 					element={
-						isAuthorized1stLab ? (
-							// Перенаправление на апп
-							<Navigate to={'/app/mail/app'} />
-						) : (
-							// Перенаправление на логин
-							<Navigate to={'/app/mail/auth'} />
-						)
+						<Navigate to={'/app/mail/app'} />
 					}>
 				</Route>
-				<Route path={'/app/mail/auth'} element={
-					<ThemeProvider theme={theme}>
-						<Login/>
-					</ThemeProvider> } />
 				<Route path={'/app/mail/app'} element={
-					userMail?.email
-						?
-						<ThemeProvider theme={theme}>
-							<MailApp />
-						</ThemeProvider>
-						: <Navigate to={'/app/mail/auth'} />}>
+					<ThemeProvider theme={theme}>
+						<MailApp />
+					</ThemeProvider>
+				}>
 					<Route
 						index
 						element={<FilteredMessagesBy messages={messagesMail} />}
@@ -128,28 +103,13 @@ const MainRoutes = () => {
 				<Route
 					path={'/app/files'}
 					element={
-						isAuthorized2ndLab ? (
-							// Перенаправление на апп
-							<Navigate to={'/app/files/app'} />
-						) : (
-							// Перенаправление на логин
-							<Navigate to={'/app/files/auth'} />
-						)
+						<Navigate to={'/app/files/app'} />
 					}>
 				</Route>
-				<Route path={'/app/files/auth'} element={
-					<ThemeProvider theme={themeFiles}>
-						<LoginFiles/>
-					</ThemeProvider> } />
-
 				<Route path={'/app/files/app'} element={
-					userFiles?.email
-						?
-						<ThemeProvider theme={themeFiles}>
-							<FilesApp />
-						</ThemeProvider>
-						: <Navigate to={'/app/files/auth'} />}>
-
+					<ThemeProvider theme={themeFiles}>
+						<FilesApp />
+					</ThemeProvider>}>
 					<Route
 						index
 						element={<FilesFilteredMessagesBy messages={messagesFiles} />}
@@ -176,33 +136,19 @@ const MainRoutes = () => {
 				<Route
 					path="/app/vishing/"
 					element={
-						userVishing.email ? (
-							<Navigate to={'/app/vishing/auth'} />
-						) : (
-							<Navigate to={'/app/vishing/app'} />
-						)
+						<Navigate to={'/app/vishing/app'} />
 					}
 				/>
-				<Route path={'/app/vishing/auth'} element={
-					<ThemeProvider theme={VishingTheme}>
-						<VishingLogin />
-					</ThemeProvider> } />
-
 				<Route
 					path={'/app/vishing/app'}
 					element={
-						userVishing.email ? (
-							<Suspense fallback={<Loader />}>
-								<ThemeProvider theme={VishingTheme}>
-									<VishingDashboard>
-										<Outlet />
-									</VishingDashboard>
-								</ThemeProvider>
-							</Suspense>
-
-						) : (
-							<Navigate to={'/app/vishing/auth'} />
-						)
+						<Suspense fallback={<Loader />}>
+							<ThemeProvider theme={VishingTheme}>
+								<VishingDashboard>
+									<Outlet />
+								</VishingDashboard>
+							</ThemeProvider>
+						</Suspense>
 					}>
 					<Route index element={
 						<ThemeProvider theme={VishingTheme}>

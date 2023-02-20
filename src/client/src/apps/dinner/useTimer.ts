@@ -13,11 +13,8 @@ export default (start = 3600, isPause= false): [string, (subTime: number) => voi
 		setPause(isPause);
 	}, [isPause]);
 
-	console.log('USE_TIMER: PAUSE IS ', pause);
-
 	useEffect(() => {
 		const ID = setInterval(() => {
-			console.log('USE_TIMER: PAUSE IN SET_INTERVAL IS', pause);
 			if(!pause){
 				if (!reverse) {
 					setTime(prev => {

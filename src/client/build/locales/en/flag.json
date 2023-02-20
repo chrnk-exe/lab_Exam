@@ -1,0 +1,25 @@
+{
+    "vishing": {
+        "good": "Congratulations! Take your flag.",
+        "bad":"YOU HACKED!",
+        "flag": "flag_voicePhishing",
+        "button": "Try again",
+        "no_incoming": "You have no incoming calls"
+    },
+    "dinner": {
+        "good": "Congratulations! You have not fallen for the tricks of adversaries. Take your flag:",
+        "bad":"Your boss fined you for your unawareness. Now, all employees have to change their passwords.",
+        "flag": "flag_d1nnerFl@g",
+        "button": "Try again",
+        "no_incoming": "Lunch is over!"
+    },
+    "checkpoint": {
+        "good": "Congratulations! You have not fallen for the tricks of scammers. Take your flag.",
+        "bad":"You fell for the tricks of scammers, someone extra entered the building!",
+        "flag": "flag_ch3ckP0int",
+        "button": "Try again",
+        "no_incoming": "Lunch is over!",
+        "deny": "Call security",
+        "skip": "Let in"
+    }
+}
