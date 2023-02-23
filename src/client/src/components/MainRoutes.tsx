@@ -48,7 +48,7 @@ const MainRoutes = () => {
 	const messagesMail = useAppSelector(state => state.messages);
 	const messagesFiles = useAppSelector(state => state.messagesFiles);
 	const isStarted = useAppSelector(state => state.labDinner);
-	const [time, subTime, isReversed] = useTimer(3600, !isStarted);
+	// const [time, subTime, isReversed] = useTimer(3600, !isStarted);
 
 	return (
 		<Routes>
@@ -183,9 +183,9 @@ const MainRoutes = () => {
 						isStarted ? (
 							<Suspense fallback={<Loader />}>
 								<ThemeProvider theme={DinnerTheme}>
-									<DinnerDashboard>
-										<Outlet />
-									</DinnerDashboard>
+									<DinnerDashboard />
+									{/*<Outlet />*/}
+									{/*</DinnerDashboard>*/}
 								</ThemeProvider>
 							</Suspense>
 						) : (
@@ -196,11 +196,7 @@ const MainRoutes = () => {
 						index
 						element={
 							<ThemeProvider theme={DinnerTheme}>
-								<DinnerApp
-									time={time}
-									subTime={subTime}
-									isReversed={isReversed}
-								/>
+								<DinnerApp />
 							</ThemeProvider>
 						}
 					/>

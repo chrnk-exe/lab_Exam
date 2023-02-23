@@ -30,10 +30,34 @@ const enum AppActions {
     Drafts
 }
 
+function arrayEquals(a: Array<number>, b: Array<number>) {
+	return a.length === b.length &&
+		a.every((val, index) => val === b[index]);
+}
+
 function App() {
 	const messages = useAppSelector(state => state.messagesFiles);
 	const [selected, setSelected] = useState(1);
 	const navigate = useNavigate();
+
+	const [isAlerted, setAlert] = useState(false);
+	if(messages.filter(message => message.favorite).length +
+		messages.filter(message => message.type === 'trash').length === 5)
+	{
+		// id 2 и id 4 - id честных писем
+		const favoriteMessages = messages
+			.filter(message => message.favorite)
+			.map(message => message.id);
+		if(arrayEquals(favoriteMessages, [2, 4]) || arrayEquals(favoriteMessages, [4, 2])) {
+			if(!isAlerted) {
+				alert('Your flag: flag_D@nger0usF1lesDetect3d');
+				setAlert(true);
+			}
+		} else {
+			alert('You made a mistake, try again!');
+			window.location.reload();
+		}
+	}
 
 	const Buttons = [
 		// {action: AppActions.Compose, icon: <CreateIcon />, text: 'Compose'},

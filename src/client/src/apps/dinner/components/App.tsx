@@ -3,14 +3,19 @@ import { Box, Modal, Fade, Typography, Button } from '@mui/material';
 import Scripts from './Scripts';
 import { useTranslation } from 'react-i18next';
 import workingVideo from '../assets/1.mp4';
+import {useOutletContext} from 'react-router-dom';
 
-interface Props {
-	time: string,
-	subTime(subTime: number): void,
-	isReversed: boolean
-}
+// interface Props {
+// 	time: string,
+// 	subTime(subTime: number): void,
+// 	isReversed: boolean
+// }
 
-const App: FC<Props> = ({time, subTime, isReversed}) => {
+type Props = [string, (subTime: number) => void, boolean];
+
+const App = () => {
+// const App: FC<Props> = ({time, subTime, isReversed}) => {
+	const [time, subTime, isReversed] = useOutletContext<Props>();
 	const [showFlag, setShowFlag] = useState<boolean>(false);
 	const [open, setOpen] = useState<boolean>(false);
 	const { t } = useTranslation('flag', {keyPrefix: 'dinner'});

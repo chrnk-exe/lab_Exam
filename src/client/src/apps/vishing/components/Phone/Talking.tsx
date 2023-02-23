@@ -21,44 +21,18 @@ const Talking: FC<Props> = ({ step, handleCallOff, incrementResult }) => {
 
 	//YandereDev mode
 	const answerHandler = (answerIsTrue: boolean) => {
-		if (step === 4) {
-			answerIsTrue && incrementResult();
-			handleCallOff();
+		if(step === 5){
+			if(replicaStep === 0){
+				answerIsTrue && nextReplica();
+			} else {
+				answerIsTrue && incrementResult();
+				handleCallOff();
+			}
 			return;
 		}
-		if (step === 5 && !answerIsTrue) {
-			handleCallOff();
-		}
-		if (step === 5 && replicaStep === 1) {
-			answerIsTrue && incrementResult();
-			handleCallOff();
-			return;
-		}
-		nextReplica();
-		if (step === 1 && !answerIsTrue) {
-			setReplica(replicas.length - 1);
-			setTimeout(handleCallOff, 1500);
-		}
-		if (step === 1 && answerIsTrue && replicaStep === 2) {
-			incrementResult();
-			handleCallOff();
-		}
-		if (step === 2 && answerIsTrue) {
-			incrementResult();
-			handleCallOff();
-		}
-		if (step === 2 && !answerIsTrue) {
-			setTimeout(handleCallOff, 3000);
-		}
-		if (step === 3 && !answerIsTrue) {
-			handleCallOff();
-		}
-		if (step === 3 && replicaStep === 1 && answerIsTrue) {
-			incrementResult();
-			handleCallOff();
-		} else if (step === 3 && replicaStep === 1) {
-			handleCallOff();
-		}
+		answerIsTrue && incrementResult();
+		handleCallOff();
+		return;
 	};
 
 	return (

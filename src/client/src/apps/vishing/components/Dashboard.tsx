@@ -17,7 +17,6 @@ import avatar from '../assets/Hacktory.jpg';
 import Typography from '@mui/material/Typography';
 import PhoneIcon from '@mui/icons-material/Phone';
 import ContactsIcon from '@mui/icons-material/Contacts';
-import LogoutIcon from '@mui/icons-material/Logout';
 import Collapse from '@mui/material/Collapse';
 import { useTranslation } from 'react-i18next';
 import Chip from '@mui/material/Chip';
@@ -78,12 +77,6 @@ export default function PrimarySearchAppBar({
 	];
 
 	const navigate = useNavigate();
-
-	const logOutHandler = () => {
-		window.localStorage.clear();
-		window.sessionStorage.clear();
-		window.location.reload();
-	};
 
 	const changeLanguage = (language: 'en' | 'ru') => {
 		setLanguage(language);
@@ -168,14 +161,6 @@ export default function PrimarySearchAppBar({
 							</ListItemButton>
 						</ListItem>
 					))}
-					<ListItem sx={{ px: 0 }}>
-						<ListItemButton onClick={logOutHandler}>
-							<ListItemIcon>
-								<LogoutIcon />
-							</ListItemIcon>
-							<ListItemText>{t('Log out')}</ListItemText>
-						</ListItemButton>
-					</ListItem>
 				</List>
 			</Drawer>
 			<Box

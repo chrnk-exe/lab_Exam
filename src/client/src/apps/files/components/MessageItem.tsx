@@ -25,7 +25,7 @@ const MessageItem = ({
 	avatar: string;
 }) => {
 	const message = useAppSelector(state =>
-		state.messages.find(message => message.id === id),
+		state.messagesFiles.find(message => message.id === id),
 	);
 
 	const dispatch = useAppDispatch();

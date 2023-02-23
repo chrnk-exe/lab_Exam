@@ -1,5 +1,6 @@
 import React, { type FC, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Outlet } from 'react-router';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
@@ -21,6 +22,8 @@ import WifiIcon from '@mui/icons-material/Wifi';
 import Collapse from '@mui/material/Collapse';
 import { useTranslation } from 'react-i18next';
 import ChangeLanguageButton from './ChangeLanguageButton';
+import {useAppSelector} from '../../../store/hooks';
+import useTimer from '../useTimer';
 
 const drawerWidth = 200;
 
@@ -52,14 +55,17 @@ const Drawer = styled(MuiDrawer, {
 	},
 }));
 
-interface Props {
-	children: React.ReactNode;
-}
+// interface Props {
+// 	children: React.ReactNode;
+// }
 
-const PrimarySearchAppBar: FC<Props> = ({ children }) => {
+const PrimarySearchAppBar = () => {
+// const PrimarySearchAppBar: FC<Props> = ({ children }) => {
 	const [open, setOpen] = useState<boolean>(true);
 	const { t } = useTranslation('translation', { keyPrefix: 'dinner.menu' });
 	const drawerToggler = () => setOpen(prev => !prev);
+	const isStarted = useAppSelector(state => state.labDinner);
+	const [time, subTime, isReversed] = useTimer(3600, !isStarted);
 
 	const Navigations = [
 		{
@@ -154,7 +160,7 @@ const PrimarySearchAppBar: FC<Props> = ({ children }) => {
 					// overflowX: 'hidden'
 					// marginTop: 8,
 				}}>
-				{children}
+				<Outlet context={[time, subTime, isReversed]}/>
 			</Box>
 		</Box>
 	);

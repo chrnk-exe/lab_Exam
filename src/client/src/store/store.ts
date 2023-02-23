@@ -12,6 +12,7 @@ import scriptVishingReducer from '../apps/vishing/store/slices/scriptSlice';
 
 import labDinnerReducer from '../apps/dinner/store/slices/labSlice';
 import scriptDinnerReducer from '../apps/dinner/store/slices/scriptSlice';
+import timerDinnerReducer from './slices/timerSlice';
 
 import labCheckpointReducer from '../apps/checkpoint/store/slices/labSlice';
 import scriptCheckpointReducer from '../apps/checkpoint/store/slices/scriptSlice';
@@ -31,6 +32,7 @@ export const store = configureStore({
 
 		labDinner: labDinnerReducer,
 		scriptDinner: scriptDinnerReducer,
+		timerDinner:timerDinnerReducer,
 
 		labCheckpoint: labCheckpointReducer,
 		scriptCheckpoint: scriptCheckpointReducer

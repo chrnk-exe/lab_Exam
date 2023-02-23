@@ -1,9 +1,5 @@
-import React, { useState } from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { ClickAwayListener } from '@mui/material';
+import React from 'react';
+import { Box, Button } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import {
 	addToFavorites,
@@ -22,16 +18,9 @@ const enum MessageActions {
 }
 
 export default function MessageItemMenu({ id }: { id: number }) {
-	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-	const open = Boolean(anchorEl);
-	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-		setAnchorEl(event.currentTarget);
-	};
-
 	const messageType = useAppSelector(
 		state => state.messages.find(message => message.id === id)?.type,
 	);
-
 	const isFavorite = useAppSelector(
 		state => state.messages.find(msg => msg.id === id)?.favorite,
 	);
@@ -58,65 +47,30 @@ export default function MessageItemMenu({ id }: { id: number }) {
 		default:
 			break;
 		}
-		setAnchorEl(null);
 	};
 
 	return (
-		<ClickAwayListener onClickAway={() => setAnchorEl(null)}>
-			<div>
-				<Button onClick={handleClick}>
-					<MoreVertIcon />
-				</Button>
-				{messageType === 'inbox' ? (
-					<Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-						{!isFavorite ? (
-							<MenuItem
-								onClick={() =>
-									handleClose(MessageActions.Favorite)
-								}>
-								Favorite
-							</MenuItem>
-						) : (
-							<MenuItem
-								onClick={() =>
-									handleClose(MessageActions.Unfavorite)
-								}>
-								Delete from favorites
-							</MenuItem>
-						)}
-						<MenuItem
-							onClick={() => handleClose(MessageActions.Delete)}>
-							Delete
-						</MenuItem>
-						<MenuItem
-							onClick={() => handleClose(MessageActions.Spam)}>
-							Spam
-						</MenuItem>
-					</Menu>
-				) : (
-					<Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-						<MenuItem
-							onClick={() => handleClose(MessageActions.Inbox)}>
-							Reestablish
-						</MenuItem>
-						{!isFavorite ? (
-							<MenuItem
-								onClick={() =>
-									handleClose(MessageActions.Favorite)
-								}>
-								Favorite
-							</MenuItem>
-						) : (
-							<MenuItem
-								onClick={() =>
-									handleClose(MessageActions.Unfavorite)
-								}>
-								Delete from favorites
-							</MenuItem>
-						)}
-					</Menu>
-				)}
-			</div>
-		</ClickAwayListener>
+		<Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} gap={1} sx={{ml: 1}}>
+			<Button
+				variant={'contained'}
+				color={!isFavorite ? 'success' : 'warning'}
+				sx={{
+					width: '100px'
+				}}
+				disabled={messageType === 'trash'}
+				onClick={() => handleClose(!isFavorite ? MessageActions.Favorite : MessageActions.Unfavorite)}>
+				{!isFavorite ? 'Favorite' : 'Dislike'}
+			</Button>
+			<Button
+				color={messageType === 'trash' ? 'success' : 'error'}
+				variant={'contained'}
+				sx={{
+					width: '100px'
+				}}
+				disabled={isFavorite}
+				onClick={() => handleClose(messageType === 'trash' ? MessageActions.Inbox : MessageActions.Delete)}>
+				{messageType === 'trash' ? 'Reestablish' : 'Delete'}
+			</Button>
+		</Box>
 	);
 }

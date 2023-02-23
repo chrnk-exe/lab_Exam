@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e768583d.css",
-    "main.js": "/static/js/main.a5a76e59.js",
+    "main.css": "/static/css/main.d205b0d6.css",
+    "main.js": "/static/js/main.2e563535.js",
     "static/media/skip.mov": "/static/media/skip.6c00e20170158598ab32.mov",
     "static/media/Handcuffs.mov": "/static/media/Handcuffs.be2ad701c1a4a56f78c3.mov",
     "static/media/guard.mov": "/static/media/guard.47759804df3c41ad1502.mov",
@@ -42,11 +42,11 @@
     "static/media/Microsoft_logo.svg": "/static/media/Microsoft_logo.72f0fcc793eda19cdc1604efc3b381cb.svg",
     "static/media/russia.svg": "/static/media/russia.b41328698709cf180d8d19cd65d03050.svg",
     "static/media/Timeline.pptx": "/static/media/Timeline.31d6cfe0d16ae931b73c.pptx",
-    "main.e768583d.css.map": "/static/css/main.e768583d.css.map",
-    "main.a5a76e59.js.map": "/static/js/main.a5a76e59.js.map"
+    "main.d205b0d6.css.map": "/static/css/main.d205b0d6.css.map",
+    "main.2e563535.js.map": "/static/js/main.2e563535.js.map"
   },
   "entrypoints": [
-    "static/css/main.e768583d.css",
-    "static/js/main.a5a76e59.js"
+    "static/css/main.d205b0d6.css",
+    "static/js/main.2e563535.js"
   ]
 }

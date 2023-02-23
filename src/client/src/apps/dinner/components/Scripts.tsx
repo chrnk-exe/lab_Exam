@@ -24,7 +24,7 @@ const Scripts: FC<Props> = ({
 	const result = useAppSelector(state => state.scriptDinner.result);
 
 	useEffect(() => {
-		if (step === 8) {
+		if (step === 7) {
 			openModal();
 			if (result === 1) {
 				showFlag();
@@ -32,7 +32,7 @@ const Scripts: FC<Props> = ({
 		}
 	}, [step, result]);
 
-	if (step !== 8)
+	if (step !== 7)
 		return (
 			<Box
 				display="flex"

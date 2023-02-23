@@ -38,7 +38,7 @@ const MessageItem = ({
 	};
 
 	return (
-		<Button fullWidth onClick={onMessageClickHandler}>
+		<Button sx={{minHeight: '100px'}} fullWidth onClick={onMessageClickHandler}>
 			<div className={classes.messageItem}>
 				<div className={classes.content}>
 					<div

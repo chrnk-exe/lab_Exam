@@ -33,8 +33,10 @@ const Quest: FC<Props> = ({time, subTime, isReversed}) => {
 				(t('scripts', { returnObjects: true }) as Script[])[step - 1]['nextStage'],
 			),
 		);
-		return 0;
+		return;
 	};
+
+
 
 	return (
 		<Box

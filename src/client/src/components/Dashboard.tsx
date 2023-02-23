@@ -12,7 +12,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ContactsIcon from '@mui/icons-material/Contacts';
+import HomeIcon from '@mui/icons-material/Home';
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
@@ -58,14 +59,19 @@ const PrimarySearchAppBar: FC<Props> = ({ children}) => {
 
 	const Navigations = [
 		{
+			link: '/app',
+			title: 'Main Page',
+			icon: <HomeIcon />,
+		},
+		{
 			link: '/app/mail',
 			title: 'Mail',
 			icon: <EmailIcon />,
 		},
 		{
 			link: '/app/files',
-			title: 'Mail',
-			icon: <EmailIcon />,
+			title: 'Mail 2',
+			icon: <InsertDriveFileIcon />,
 		},
 		{
 			link: '/app/vishing',
@@ -74,12 +80,12 @@ const PrimarySearchAppBar: FC<Props> = ({ children}) => {
 		},
 		{
 			link: '/app/dinner',
-			title: 'Dinner',
+			title: 'Walk',
 			icon: <DinnerDiningIcon />,
 		},
 		{
 			link: '/app/checkpoint',
-			title: 'Checkpoint',
+			title: 'Reception',
 			icon: <SecurityIcon />,
 		},
 	];
