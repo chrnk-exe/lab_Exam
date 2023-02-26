@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import classes from './styles/Vk.module.sass';
-import logo from '../assets/vkmessage.png';
+import classes from './styles/Ozon.module.sass';
+import logo from '../assets/ozon.png';
 import WarningAlert from './WarningAlert';
 
-const VkMessage = () => {
+const OzonMessage = () => {
 	const [warning, setWarning] = useState(false);
 
 	return (
@@ -15,7 +15,7 @@ const VkMessage = () => {
 				<div>
 					<p>Hello, dear user!</p>
 					<p>
-						Your password on the VKontakte website was successfully
+						Your password on the Ozon website was successfully
 						changed today at 03:16 from a Windows device via Chrome,
 						Russia, St. Petersburg.
 					</p>
@@ -41,11 +41,11 @@ const VkMessage = () => {
 					<em>With respect,</em>
 				</p>
 				<p>
-					<em>VK team.</em>
+					<em>OZON team.</em>
 				</p>
 			</footer>
 		</div>
 	);
 };
 
-export default VkMessage;
+export default OzonMessage;

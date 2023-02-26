@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './styles/Google.module.sass';
-import logo from '../assets/GoogleMessage.png';
+import classes from './styles/Amazon.module.sass';
+import logo from '../assets/AmazonLogo.svg';
 
-const GoogleMessage = () => {
+const AmazonMessage = () => {
 	return (
 		<div className={classes.message}>
 			<header className={classes.logo}>
@@ -31,7 +31,7 @@ const GoogleMessage = () => {
 						You can also view security related activities on this
 						page:
 						<a href={'#'}>
-							https://myaccount.google.com/notifications
+							https://myaccount.amazon.com/notifications
 						</a>
 					</p>
 				</div>
@@ -43,4 +43,4 @@ const GoogleMessage = () => {
 	);
 };
 
-export default GoogleMessage;
+export default AmazonMessage;

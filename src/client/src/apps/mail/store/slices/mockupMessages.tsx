@@ -1,43 +1,43 @@
 import React from 'react';
-import Google from '../../assets/Google.svg';
+import Amazon from '../../assets/AmazonLogo.svg';
 import MailRu from '../../assets/MailRu.svg';
-import Vk from '../../assets/Vk.svg';
-import Yandex from '../../assets/Yandex.svg';
-import Youtube from '../../assets/Youtube.svg';
+import Ozon from '../../assets/ozon.png';
+import Github from '../../assets/Github.svg';
+import Apple from '../../assets/AppleLogo.svg';
 import formatDate from '../../formatDate';
 
 // messages
-import YandexMessage from '../../lab/YandexMessage';
+import GitHubMessage from '../../lab/GitHubMessage';
 import MailRuMessage from '../../lab/MailRuMessage';
-import YoutubeMessage from '../../lab/YoutubeMessage';
-import VkMessage from '../../lab/VkMessage';
-import GoogleMessage from '../../lab/GoogleMessage';
+import AppleMessage from '../../lab/AppleMessage';
+import OzonMessage from '../../lab/OzonMessage';
+import AmazonMessage from '../../lab/AmazonMessage';
 
 // .eml links
-import YandexEML from '../../lab/eml/yandex.eml';
+import GithubEML from '../../lab/eml/GitHub.eml';
+import AppleEML from '../../lab/eml/Apple.eml';
 import MailRuEML from '../../lab/eml/mailru.eml';
-import YoutubeEML from '../../lab/eml/youtube.eml';
-import VkEML from '../../lab/eml/vk.eml';
-import GoogleEML from '../../lab/eml/google.eml';
+import OzonEML from '../../lab/eml/Ozon.eml';
+import AmazonEML from '../../lab/eml/Amazon.eml';
 
 
 
 export default [
 	{
 		id: 1,
-		subject: 'Someone is trying to log into your Yandex account',
-		from: 'Yandex',
-		sender: 'yandex.suport6@yandex.ru',
+		subject: 'Someone is trying to log into your GitHub account',
+		from: 'GitHub',
+		sender: 'github.suport6@rambler.ru',
 		to: 'admin@hacktory.com',
 
 		read: false,
 		date: formatDate(new Date()),
 		favorite: false,
 		type: 'inbox',
-		avatar: Yandex,
+		avatar: Github,
 		
-		payload: (<YandexMessage />),
-		eml: YandexEML
+		payload: (<GitHubMessage />),
+		eml: GithubEML
 	},
 	{
 		id: 2,
@@ -58,8 +58,8 @@ export default [
 	},
 	{
 		id: 3,
-		subject: 'New video from your favorite channel!',
-		from: 'Youtube',
+		subject: 'You need to confirm the email address for the Apple ID',
+		from: 'Apple',
 		sender: 'no-reply@youtube.com',
 		to: 'admin@hacktory.com',
 
@@ -67,41 +67,41 @@ export default [
 		favorite: false,
 		date: formatDate(new Date()),
 		type: 'inbox',
-		avatar: Youtube,
+		avatar: Apple,
 
-		payload: (<YoutubeMessage />),
-		eml: YoutubeEML
+		payload: (<AppleMessage />),
+		eml: AppleEML
 	},
 	{
 		id: 4,
 		subject: 'Approve password change',
-		from: 'Vk',
-		sender: 'admin@notify.vk.ru',
+		from: 'Ozon',
+		sender: 'ma1ler@sender.ozon.ru',
 		to: 'admin@hacktory.com',
 
 		read: false,
 		favorite: false,
 		date: formatDate(new Date()),
 		type: 'inbox',
-		avatar: Vk,
+		avatar: Ozon,
 
-		payload: (<VkMessage />),
-		eml: VkEML
+		payload: (<OzonMessage />),
+		eml: OzonEML
 	},
 	{
 		id: 5,
 		subject: 'Someone added your email address as a backup',
-		from: 'Google',
-		sender: 'no-reply@accounts.google.com',
+		from: 'Amazon',
+		sender: 'no-reply@accounts.amazon.com',
 		to: 'admin@hacktory.com',
 
 		read: false,
 		favorite: false,
 		date: formatDate(new Date()),
 		type: 'inbox',
-		avatar: Google,
+		avatar: Amazon,
 
-		payload: (<GoogleMessage />),
-		eml: GoogleEML
+		payload: (<AmazonMessage />),
+		eml: AmazonEML
 	}
 ] as Message[];

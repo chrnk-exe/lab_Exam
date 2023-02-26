@@ -21,12 +21,11 @@ const App = () => {
 	const step = useAppSelector(state => state.scriptCheckpoint.step);
 	const currentResult = useAppSelector(state => state.scriptCheckpoint.currentResult);
 
-
 	const [isSkipped, setIsSkipped] = useState<boolean>(true);
-
 	const [openVideo, setOpenVideo] = useState(false);
 	const handleOpenVideo = (skip: boolean) => {
-		const mask = [true, false, false, true, false];
+		// Маска кого впускать можно, а кого нет!
+		const mask = [false, true, false, true, false];
 		setIsSkipped(skip);
 		dispatch(zeroReplica());
 		dispatch(nextStep());

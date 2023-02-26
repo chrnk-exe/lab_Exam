@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import classes from './styles/Yandex.module.sass';
-import logo from '../assets/yandexid.png';
+import classes from './styles/GitHub.module.sass';
+import logo from '../assets/Github.svg';
 import WarningAlert from './WarningAlert';
 
-const YandexMessage = () => {
+const GitHubMessage = () => {
 	const [warning, setWarning] = useState(false);
 
 	return (
@@ -15,7 +15,7 @@ const YandexMessage = () => {
 				<div>
 					<p>Hello, dear user!</p>
 					<p>
-						Someone has entered the correct password for your Yandex
+						Someone has entered the correct password for your Github
 						account <strong>a***</strong>. Here is the information
 						that we have:
 					</p>
@@ -31,7 +31,7 @@ const YandexMessage = () => {
 								setWarning(true);
 							}}
 							href="http://attacker.tk">
-							https://yandex.com/support/passport/troubleshooting/hacked.html
+							https://github.com/settings/security
 						</a>
 						{warning ? (
 							<WarningAlert
@@ -55,10 +55,11 @@ const YandexMessage = () => {
 				</div>
 			</main>
 			<footer className={classes.footer}>
-				<em>Sincerely, Yandex ID team.</em>
+				<em>Thanks,
+					The GitHub Team</em>
 			</footer>
 		</div>
 	);
 };
 
-export default YandexMessage;
+export default GitHubMessage;
