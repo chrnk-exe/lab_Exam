@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
-import classes from './styles/HHru.module.sass';
-import logo from '../assets/hh-red_logo.png';
+import classes from './styles/YandexWork.module.sass';
+import logo from '../assets/yandexid.png';
 import hidethepainharold from '../assets/hidethepainharold.jpg';
 import WarningAlert from './WarningAlert';
 
-const HHruMessage = () => {
+const YandexWorkMessage = () => {
 	const [warning, setWarning] = useState(false);
 
 	return (
 		<div className={classes.message}>
 			<header className={classes.logo}>
-				<img src={logo} height={65} alt="HH Logo PNG" />
+				<img src={logo} height={65} alt="Yandex Work Logo" />
 			</header>
 			<main className={classes.content}>
 				<div>
 					<p>Hello, dear employer!</p>
 					<p>
 						You have received a new response to your vacancy on{' '}
-						<a href="#">hh.ru</a>!
+						<a href="#">https://yandex.com/jobs/vacancies</a>!
 					</p>
 					<p>
 						User <a href="#">Hide The Pain Harold</a> responded to
@@ -172,10 +172,10 @@ const HHruMessage = () => {
 				</div>
 			</main>
 			<footer className={classes.footer}>
-				<em>© HeadHunter, 2000–2022</em>
+				<em>© Yandex vacancies, 2000–2023</em>
 			</footer>
 		</div>
 	);
 };
 
-export default HHruMessage;
+export default YandexWorkMessage;

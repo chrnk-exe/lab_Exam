@@ -2,30 +2,29 @@ import React from 'react';
 import formatDate from '../../formatDate';
 
 // corp icons
+import YandexWork from '../../assets/Yandex.svg';
 import Google from '../../assets/Google.svg';
-import Apple from '../../assets/Apple_logo.svg';
-import HeadHunter from '../../assets/hh-red_logo.png';
+import WhatsApp from '../../assets/whatsapp.png';
+import TikTok from '../../assets/tiktok.svg';
 import Microsoft from '../../assets/Microsoft_logo.svg';
-import Youtube from '../../assets/Youtube.svg';
 
 // messages
-import HHruMessage from '../../lab/HHruMessage';
+import YandexWorkMessage from '../../lab/YandexWorkMessage';
+import WhatsAppMessage from '../../lab/WhatsAppMessage';
+import TikTokMessage from '../../lab/TikTokMessage';
 import MicrosoftMessage from '../../lab/MicrosoftMessage';
-import YoutubeMessage from '../../lab/YoutubeMessage';
-import AppleMessage from '../../lab/AppleMessage';
 import GoogleMessage from '../../lab/GoogleMessage';
 
 // .eml links
-import AppleEML from '../../lab/eml/Apple.eml';
-import GoogleEML from '../../lab/eml/Google.eml';
-import HHruEML from '../../lab/eml/HHru.eml';
-import YoutubeEML from '../../lab/eml/Youtube.eml';
+import YandexWorkEML from '../../lab/eml/YandexWork.eml';
+import WhatsAppEML from '../../lab/eml/WhatsApp.eml';
+import TikTokEML from '../../lab/eml/TikTok.eml';
 import MicrosoftEML from '../../lab/eml/Microsoft.eml';
+import GoogleEML from '../../lab/eml/Google.eml';
 
 //files links
-import microsoftTerms from '../../lab/files/microsoftTerms.pdf';
+import whatsAppTerms from '../../lab/files/TermsWhatsApp.pdf';
 import Timeline from '../../lab/files/Timeline.pptx';
-
 import doubleExtensionPdf from '../../lab/files/py.pdf.exe';
 import justEXE from '../../lab/files/program.exe';
 import passwordArchive from '../../lab/files/CoolScript.zip';
@@ -33,32 +32,72 @@ import passwordArchive from '../../lab/files/CoolScript.zip';
 
 export default [
 	{
-		id: 3,
+		id: 1,
 		subject: 'You have received a new response to a vacancy!',
-		from: 'HeadHunter',
-		sender: 'noreply@hh.com',
+		from: 'Yandex Work',
+		sender: 'n0-reply@yandex.com',
 		to: 'admin@hacktory.com',
 
 		read: false,
 		date: formatDate(new Date()),
 		favorite: false,
 		type: 'inbox',
-		avatar: HeadHunter,
+		avatar: YandexWork,
 		
-		payload: (<HHruMessage />),
-		eml: HHruEML,
+		payload: (<YandexWorkMessage />),
+		eml: YandexWorkEML,
 		files: [{
-			name: 'program.exe',
+			name: 'TestCase.exe',
 			content: justEXE,
 		}]
 	},
 	{
-		id: 4,
+		id: 2,
 		subject: 'Updated Terms of Use',
-		from: 'Microsoft',
-		sender: 'msa@communication.microsoft.com',
+		from: 'Whats App',
+		sender: 'no-reply@whatsapp.com',
 		to: 'admin@hacktory.com',
 
+
+		read: false,
+		favorite: false,
+		date: formatDate(new Date()),
+		type: 'inbox',
+		avatar: WhatsApp,
+
+		payload: (<WhatsAppMessage />),
+		eml: WhatsAppEML,
+		files: [{
+			name: 'Terms.pdf',
+			content: whatsAppTerms,
+		}]
+	},
+	{
+		id: 3,
+		subject: 'Important changes on TikTok (action required)',
+		from: 'Tik Tok',
+		sender: 'no_repiy@tik-tok.com',
+		to: 'admin@hacktory.com',
+
+		read: false,
+		favorite: false,
+		date: formatDate(new Date()),
+		type: 'inbox',
+		avatar: TikTok,
+
+		payload: (<TikTokMessage />),
+		eml: TikTokEML,
+		files: [{
+			name: 'Updated Terms of Use.zip',
+			content: passwordArchive,
+		}]
+	},
+	{
+		id: 4,
+		subject: 'Creating a corporate Microsoft Account',
+		from: 'Microsoft',
+		sender: 'micros0ft@gmail.com',
+		to: 'admin@hacktory.com',
 
 		read: false,
 		favorite: false,
@@ -69,52 +108,12 @@ export default [
 		payload: (<MicrosoftMessage />),
 		eml: MicrosoftEML,
 		files: [{
-			name: 'Terms.pdf',
-			content: microsoftTerms,
-		}]
-	},
-	{
-		id: 5,
-		subject: 'Important changes on YouTube (action required)',
-		from: 'Youtube Creators',
-		sender: 'no_repiy@youtube.com',
-		to: 'admin@hacktory.com',
-
-		read: false,
-		favorite: false,
-		date: formatDate(new Date()),
-		type: 'inbox',
-		avatar: Youtube,
-
-		payload: (<YoutubeMessage />),
-		eml: YoutubeEML,
-		files: [{
-			name: 'Updated Terms of Use.zip',
-			content: passwordArchive,
-		}]
-	},
-	{
-		id: 1,
-		subject: 'Creating a corporate Apple ID',
-		from: 'Apple',
-		sender: 'appieid@id.apple.com',
-		to: 'admin@hacktory.com',
-
-		read: false,
-		favorite: false,
-		date: formatDate(new Date()),
-		type: 'inbox',
-		avatar: Apple,
-
-		payload: (<AppleMessage />),
-		eml: AppleEML,
-		files: [{
 			name: 'Terms.pdf.exe',
 			content: doubleExtensionPdf,
 		}]
 	},
 	{
-		id: 2,
+		id: 5,
 		subject: 'Google maps timeline!',
 		from: 'Google',
 		sender: 'noreply-maps-timeline@google.com',

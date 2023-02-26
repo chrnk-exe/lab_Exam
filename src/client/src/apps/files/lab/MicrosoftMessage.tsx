@@ -1,57 +1,74 @@
-import React from 'react';
-import logo from '../assets/microsoft_message.png';
-import classes from './styles/Microsoft.module.sass';
+import React, { useState } from 'react';
+import classes from './styles/Apple.module.sass';
+import WarningAlert from './WarningAlert';
 
 const MicrosoftMessage = () => {
+	const [warning, setWarning] = useState(false);
+
 	return (
 		<div className={classes.message}>
-			<img src={logo} height={45} width={200} alt="Microsoft Logo SVG" />
 			<header className={classes.logo}>
-				<h2>The agreement on the use of the service becomes clearer</h2>
+				<h1>You need to confirm the email address for the Microsoft Account</h1>
 			</header>
 			<main className={classes.content}>
-				<h2>Hello!</h2>
-				<p>
-					You have received this email because we are updating the
-					Microsoft Services Agreement applicable to the Microsoft
-					products or services that you use. We add explanations to
-					some provisions so that they are understandable to users. In
-					addition, the updated agreement will apply to new Microsoft
-					products, services and features.
-				</p>
-				<p>
-					The Microsoft Services Agreement is an agreement between you
-					and Microsoft Corporation, which regulates the use of
-					Microsoft web products and services.
-				</p>
-				<p>
-					You can read the Agreement on the use of Microsoft services{' '}
-					<a href="#">here</a>, as well as the file with the updated
-					Agreement was sent in attachments with this email. You can
-					also find out more about these changes on the FAQ page{' '}
-					<a href="#">here</a>, including a brief overview of the most
-					important ones, which will also be included in the
-					attachments.
-				</p>
-				<p>
-					If you do not agree to these terms, you can stop using our
-					products and services and close your Microsoft account
-					before they take effect. If you are a parent or guardian,
-					you are responsible for how your child uses Microsoft
-					products and services, including their purchases.
-				</p>
-				<p>Thank you for using Microsoft products and services!</p>
+				<div>
+					<p>
+						You have selected this email address as your corporate
+						Apple ID. To confirm this address, enter follow the
+						following link:
+					</p>
+					<p>
+						<a
+							onClick={e => {
+								e.preventDefault();
+								setWarning(true);
+							}}
+							className={classes.activatinglink}
+							href="http://evilattacker.tk">
+							https://microsoft.corp.com/id67731955304?companyname=hacktory&activate=true&type=corporation
+						</a>
+					</p>
+					{warning && (
+						<WarningAlert offFunction={() => setWarning(false)} />
+					)}
+					<p>
+						By clicking on this link, you agree to all the terms of
+						use of Microsoft products.
+					</p>
+					<p>
+						We strongly recommend that you download and familiarize
+						yourself with all the recommendations and rules for
+						using the products attached to this letter.
+					</p>
+					<p>
+						The link is valid for 1 hour from the moment the message
+						is sent.
+					</p>
+					<div>
+						<h3>Why did you receive this message</h3>
+						<p>
+							Microsoft always asks for confirmation of the email
+							address specified as the Apple ID. You will not be
+							able to use this Microsoft Account until you confirm your
+							email address.
+						</p>{' '}
+						<p>
+							If you have not submitted a request, ignore this
+							message. A corporate Microsoft Account will not be created without
+							confirming the address.
+						</p>
+					</div>
+				</div>
 			</main>
 			<footer className={classes.footer}>
-				<div>
-					<p>This message is sent automatically.</p>
-					<a href="#">Privacy Statement</a>
-				</div>
+				<p>
+					<a href="#">Microsoft</a> | <a href="#">Support</a> |{' '}
+					<a href="#">Privacy policy</a>
+				</p>
 				<p>
 					Microsoft Corporation, O‍ne Mi‍crosoft Wa‍y, Redm‍ond, WA
 					98052 U‍SA
 				</p>
-				<img src={logo} height={45} width={200} alt="Microsoft Logo SVG" />
 			</footer>
 		</div>
 	);

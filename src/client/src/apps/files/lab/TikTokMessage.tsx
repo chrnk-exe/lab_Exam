@@ -1,12 +1,12 @@
 import React from 'react';
-import classes from './styles/Youtube.module.sass';
-import logo from '../assets/Youtube.png';
+import classes from './styles/TikTok.module.sass';
+import logo from '../assets/tiktok.svg';
 
-const YoutubeMessage = () => {
+const TikTokMessage = () => {
 	return (
 		<div className={classes.message}>
 			<header className={classes.logo}>
-				<img src={logo} height={100} alt="Youtube Logo SVG" />
+				<img src={logo} height={100} alt="TikTok Logo SVG" />
 			</header>
 			<main className={classes.content}>
 				<div>
@@ -48,14 +48,14 @@ const YoutubeMessage = () => {
 				</div>
 			</main>
 			<footer className={classes.footer}>
-				<p>Sincerely, YouTube team</p>
+				<p>Sincerely, TikTok team</p>
 				<div className={classes.subtext}>
 					This is a mandatory service notification of changes
-					concerning your YouTube account.
+					concerning your TikTok account.
 				</div>
 			</footer>
 		</div>
 	);
 };
 
-export default YoutubeMessage;
+export default TikTokMessage;

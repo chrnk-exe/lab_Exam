@@ -44,11 +44,11 @@ function App() {
 	if(messages.filter(message => message.favorite).length +
 		messages.filter(message => message.type === 'trash').length === 5)
 	{
-		// id 2 и id 4 - id честных писем
+		// id 2 и id 5 - id честных писем
 		const favoriteMessages = messages
 			.filter(message => message.favorite)
 			.map(message => message.id);
-		if(arrayEquals(favoriteMessages, [2, 4]) || arrayEquals(favoriteMessages, [4, 2])) {
+		if(arrayEquals(favoriteMessages, [2, 5]) || arrayEquals(favoriteMessages, [5, 2])) {
 			if(!isAlerted) {
 				alert('Your flag: flag_D@nger0usF1lesDetect3d');
 				setAlert(true);

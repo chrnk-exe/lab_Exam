@@ -82,7 +82,8 @@ const FilteredMessagesBy = ({
 					.filter(
 						message =>
 							message.type === 'inbox' || message.type === 'favorite',
-					).map(item => (
+					).sort((msg1, msg2) => msg1.id - msg2.id)
+					.map(item => (
 						<div className={classes.messages} key={item.id}>
 							<MessageItem
 								id={item.id}
