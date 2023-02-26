@@ -16,8 +16,10 @@ import HomeIcon from '@mui/icons-material/Home';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
-import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 import SecurityIcon from '@mui/icons-material/Security';
+import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
+import ReceptionIcon from '../assets/reception.png';
+import {SvgIcon} from '@mui/material';
 
 const drawerWidth = 200;
 
@@ -81,12 +83,14 @@ const PrimarySearchAppBar: FC<Props> = ({ children}) => {
 		{
 			link: '/app/dinner',
 			title: 'Walk',
-			icon: <DinnerDiningIcon />,
+			icon: <DirectionsRunIcon />,
 		},
 		{
 			link: '/app/checkpoint',
 			title: 'Reception',
-			icon: <SecurityIcon />,
+			icon: <img src={ReceptionIcon} height={30} style={{
+				opacity: 0.6
+			}}/>,
 		},
 	];
 

@@ -6,10 +6,11 @@ function App() {
 
 	return (
 		<Box
-			display="grid"
-			gridTemplateColumns="2fr 1fr"
-			sx={{ width: '100%', boxSizing: 'border-box' }}>
-			Информация про экзамен
+			display="flex"
+			justifyContent={'center'}
+			alignItems={'center'}
+			sx={{ width: '100%', boxSizing: 'border-box', height: '50%' }}>
+			Главная Страница
 		</Box>
 	);
 }
