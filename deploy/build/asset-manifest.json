@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d78c1d3c.css",
-    "main.js": "/static/js/main.5e498253.js",
+    "main.js": "/static/js/main.0084635b.js",
     "static/media/skip.mov": "/static/media/skip.6c00e20170158598ab32.mov",
     "static/media/Handcuffs.mov": "/static/media/Handcuffs.be2ad701c1a4a56f78c3.mov",
     "static/media/guard.mov": "/static/media/guard.47759804df3c41ad1502.mov",
@@ -15,6 +15,7 @@
     "static/media/Google.eml": "/static/media/Google.3137559035257a676e1b.eml",
     "static/media/whatsapp.png": "/static/media/whatsapp.d026940870fb334920b7.png",
     "static/media/ozon.png": "/static/media/ozon.cc8cdcb37792878f07ad.png",
+    "static/media/reception.png": "/static/media/reception.0a258dde56b405de24e5.png",
     "static/media/YandexWork.eml": "/static/media/YandexWork.7ffd45203f16f1e5addc.eml",
     "static/media/mailru.eml": "/static/media/mailru.0877a614a7082abf263a.eml",
     "static/media/WhatsApp.eml": "/static/media/WhatsApp.e940d2b9c01dd42b0602.eml",
@@ -45,10 +46,10 @@
     "static/media/russia.svg": "/static/media/russia.b41328698709cf180d8d19cd65d03050.svg",
     "static/media/Timeline.pptx": "/static/media/Timeline.31d6cfe0d16ae931b73c.pptx",
     "main.d78c1d3c.css.map": "/static/css/main.d78c1d3c.css.map",
-    "main.5e498253.js.map": "/static/js/main.5e498253.js.map"
+    "main.0084635b.js.map": "/static/js/main.0084635b.js.map"
   },
   "entrypoints": [
     "static/css/main.d78c1d3c.css",
-    "static/js/main.5e498253.js"
+    "static/js/main.0084635b.js"
   ]
 }
