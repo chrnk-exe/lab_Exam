@@ -1,0 +1,77 @@
+{
+    "vishing": {
+        "menu": {
+            "Main Page": "Главное меню",
+            "Contacts": "Контакты",
+            "Log out": "Выйти"
+        },
+        "contacts": {
+            "Contacts": "Ваши контакты",
+            "name": "Имя",
+            "number": "Номер",
+            "date": "Последний звонок"
+        },
+        "talk_ended": "Звонок завершён",
+        "next_call": "Новый звонок поступит через: "
+    },
+    "dinner": {
+        "menu": {
+            "Main Page": "Главное меню",
+            "Contacts": "Контакты"
+        },
+        "wifi": {
+            "wifi": "Доступные сети",
+            "name": "Название",
+            "open_closed": "Открытая или закрытая сеть",
+            "open": "Открытая",
+            "closed": "Необходим пароль",
+            "connection_quality": "Качество соединения"
+        },
+        "talk_ended": "Звонок завершён",
+        "next_call": "Новый звонок поступит через: ",
+        "Lets_Dinner": "Пора обедать!"
+    },
+    "checkpoint": {
+        "menu": {
+            "Main Page": "Главное меню",
+            "Contacts": "Контакты",
+            "invitations": "Приглашения",
+            "notes":"Заметки"
+        },
+        "wifi": {
+            "wifi": "Доступные сети",
+            "name": "Название",
+            "open_closed": "Открытая или закрытая сеть",
+            "open": "Открытая",
+            "closed": "Необходим пароль",
+            "connection_quality": "Качество соединения"
+        },
+        "invitations": {
+            "invitations":"Приглашения",
+            "name": "ФИО",
+            "time": "Время посещения",
+            "reason": "Причина",
+            "snow_cleaner": "Игорь Валерьев",
+            "snow_cleaner_reason":"Уборка снега на крыше",
+            "ad_adviser": "Николай Захаров",
+            "ad_adviser_reason":"Обсуждение новых рекламных идей в отделе маркетинга",
+            "job_candidate_1": "Борис Мельников",
+            "job_candidate_reason_1": "Собеседование на должность Software Engineer",
+            "job_candidate_2": "Дмитрий Лосев",
+            "job_candidate_reason_2": "Собеседование на должность HR"
+        },
+        "notes": {
+            "notes": "Заметки",
+            "title": "Заголовок",
+            "body": "Описание",
+            "snow_cleaner_title": "Посещение",
+            "snow_cleaner_body": "Придёт мужчина передать вещи Марии Петровой.",
+            "random_title": "Обед",
+            "random_body": "Сегодня обед будет на 15 минут позже, завозят новую партию продуктов."
+        },
+        "talk_ended": "Звонок завершён",
+        "next_call": "Новый звонок поступит через: ",
+        "Lets_Dinner": "Пора обедать!",
+        "The_guests_are_over": "Гости закончились!"
+    }
+}
