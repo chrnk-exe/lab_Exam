@@ -121,15 +121,15 @@ const App = () => {
 					pr: 1,
 				}}>
 				<video src={guardVideo} width="" muted autoPlay loop></video>
-				<Box display={'flex'} justifyContent={'space-evenly'} alignItems={'center'}>
+				<Box display={'flex'} justifyContent={'space-evenly'} alignItems={'center'} sx={{mt: 1}}>
 					
 					<Button
 						variant={'contained'}
-						sx={{bgcolor:'#F00', width: '110px'}}
+						sx={{bgcolor:'#F00', width: '120px', height: '60px'}}
 						onClick={() => handleOpenVideo(false)}>{t('deny')}</Button>
 					<Button
 						variant={'contained'}
-						sx={{bgcolor:'#0F0', width: '110px', color: '#000'}}
+						sx={{bgcolor:'#0F0', width: '120px', height: '60px', color: '#000'}}
 						onClick={() => handleOpenVideo(true)}>{t('skip')}</Button>
 				</Box>
 

@@ -10,7 +10,7 @@ const invitations: Invite[] = [
 	{
 		id: 2,
 		name: 'ad_adviser',
-		time: '9:00',
+		time: '11:00',
 		reason: 'ad_adviser_reason'
 	},
 	{

@@ -60,11 +60,11 @@ const PrimarySearchAppBar: FC<Props> = ({ children}) => {
 	const drawerToggler = () => setOpen(prev => !prev);
 
 	const Navigations = [
-		{
-			link: '/app',
-			title: 'Main Page',
-			icon: <HomeIcon />,
-		},
+		// {
+		// 	link: '/app',
+		// 	title: 'Main Page',
+		// 	icon: <HomeIcon />,
+		// },
 		{
 			link: '/app/mail',
 			title: 'Mail',

@@ -34,7 +34,6 @@ import DinnerApp from '../apps/dinner/components/App';
 import DinnerDashboard from '../apps/dinner/components/Dashboard';
 import DinnerLogin from '../apps/dinner/components/Login';
 import DinnerWifiList from '../apps/dinner/components/WifiList';
-import useTimer from '../apps/dinner/useTimer';
 import DinnerTheme from '../apps/dinner/styles/theme';
 
 //5th Lab Components
@@ -48,11 +47,10 @@ const MainRoutes = () => {
 	const messagesMail = useAppSelector(state => state.messages);
 	const messagesFiles = useAppSelector(state => state.messagesFiles);
 	const isStarted = useAppSelector(state => state.labDinner);
-	// const [time, subTime, isReversed] = useTimer(3600, !isStarted);
 
 	return (
 		<Routes>
-			<Route path="/" element={ <Navigate to={'/app'} />} />
+			<Route path="/" element={ <Navigate to={'/app/mail/app'} />} />
 			<Route
 				path={'/app'}
 				element={
@@ -63,7 +61,10 @@ const MainRoutes = () => {
 					</Suspense>
 				}>
 
-				<Route index element={<App />} />
+				<Route index element={
+					<ThemeProvider theme={theme}>
+						<MailApp />
+					</ThemeProvider>} />
 
 				{/*Mail App Routes*/}
 				<Route
