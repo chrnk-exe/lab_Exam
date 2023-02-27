@@ -1,4 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" enable-background="new 0 0 160 160" class="base-0-2-1" style="height: calc(var(--vkui--x1, 4px) * 23); width: calc(var(--vkui--x1, 4px) * 23);" ie-style="height: calc(var(--vkui--x1, 4px) * 23); width:calc(var(--vkui--x1, 4px) * 23)">
-    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFCA5A" d="M9.105 0H150.41c5.03 0 9.1 4.1 9.1 9.1v141.33c0 5.024-4.076 9.098-9.104 9.098H9.106c-5.03 0-9.106-4.074-9.106-9.1V9.1C0 4.1 4.1 0 9.1 0z"></path>
-    <path fill-rule="evenodd" clip-rule="evenodd" fill="#BE6200" d="M91 20V4H79V0H67v12h12v4H67v16h12v4H67v16h12v4H67v56h24V44H79v-4h12V24H79v-4h12zm-8 48v32h-8V68h8z"></path>
-</svg>
