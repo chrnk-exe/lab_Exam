@@ -1,21 +1,21 @@
 {
 	"vishing": {
-		"call": "Входящий звонок",
-		"variants": "Варианты ответа",
+		"call": "Incoming call",
+		"variants": "Response options",
 		"scripts": [
 			{
 				"number": "+7 911 222 33 44",
 				"replicas": [
 					{
-						"message": "Добрый день! Это курьер от компании СДЭК. Я не смог дозвониться до вашего директора по поводу согласования времени доставки, мне передали ваш телефон в качестве дополнительного. Могу я уточнить, его номер +7 987 879 80 68?",
+						"message": "Good afternoon! This is the CDEK delivery. I couldn’t get through to your director about approving a delivery time, I have been given your phone number as an additional one. May I confirm his number +7 987 879 80 68?",
 						"last": true,
 						"answers": [
 							{
-								"text": "Я передам ему, и он самостоятельно свяжется с вами в ближайшее время.",
+								"text": "I will tell him about this and he will contact you himself shortly.",
 								"correct": true
 							},
 							{
-								"text": "Здравствуйте. Нет, его номер +7 987 469 68 65",
+								"text": "Good afternoon. No, his number is +7 987 469 68 65.",
 								"correct": false
 							}
 						]
@@ -26,14 +26,14 @@
 				"number": "+7 911 255 40 40",
 				"replicas": [
 					{
-						"message": "Доброе утро, я сотрудник службы пожарной безопасности. Вашей компанией была оставлена заявка на проверку пожарной безопасности, вам будет удобно, если наш сотрудник приедет завтра к часу дня?",
+						"message": "Good morning, I am a fire safety officer. Your company has left a request for a fire safety check, would you be comfortable with our employee arriving by 1pm tomorrow?",
 						"answers": [
 							{
-								"text": "Здравствтуйте, оставьте, пожалуйста, ваш контактный номер, и наш офис-менеджер свяжется с вами для уточнения деталей.",
+								"text": "Hello, please leave your contact number and our office manager will contact you with further details.",
 								"correct": true
 							},
 							{
-								"text": "Здравствуйте, я не занимаюсь подобными вопросами, хотите, дам контактный номер нашего офис-менеджера?",
+								"text": "Hello, I am not authorized to deal with this kind of questions, I can give you the contact number of our office manager? ",
 								"correct": false
 							}
 						],
@@ -45,14 +45,14 @@
 				"number": "+7 920 009 47 32",
 				"replicas": [
 					{
-						"message": "Добрый вечер, я Анна, жена Ивана Кузьмина, вашего сотрудника. Подскажите, пожалуйста, до скольки он планирует быть в офисе? Не могу ему дозвониться.",
+						"message": "Good evening, I'm Anna, the wife of your employee Ivan Kuzmin. Can you tell me, please, until what time does he plan to be in the office? I can't get hold of him.",
 						"answers": [
 							{
-								"text": "Здравствуйте, я сегодня с ним не пересекался. Сейчас поищу его и передам, чтобы он вам перезвонил.",
+								"text": "Hello, I haven't seen him today. I will look for him and tell him to call you back.",
 								"correct": true
 							},
 							{
-								"text": "Здравствуйте, мы не вправе разглашать данные о наших сотрудниках.",
+								"text": "Hello, we can’t divulge this kind of data about our employees.",
 								"correct": false
 							}
 						],
@@ -64,14 +64,14 @@
 				"number": "+7 956 492 32 88",
 				"replicas": [
 					{
-						"message": "Здравствуйте, я представитель управляющей компании вашего бизнес-центра. Нам была направлена заявка на проверку электропроводки в офисном помещении в ближайшую пятницу. Уточните, пожалуйста, до какого часа в этот день работает офис?",
+						"message": "Hello, I am a representative of the management company of your business center. We have been sent a request to check the wiring in the office this coming Friday. Could you please tell until what time the office is open on that day?",
 						"answers": [
 							{
-								"text": "Здравствуйте, я не занимаюсь данными вопросами. Наш офис-менеджер перезвонит в управляющую компанию и решит вопрос.",
+								"text": "Hello, I am not authorized to deal with these issues. Our office manager will call back the management company and resolve the issue.",
 								"correct": true
 							},
 							{
-								"text": "Здравствуйте, в пятницу сокращенный рабочий день, обычно никто не задерживается позже 19:00.",
+								"text": "Hello, Friday is a reduced working day, usually no one stays later than 7pm.",
 								"correct": false
 							}
 						],
@@ -83,27 +83,27 @@
 				"number": "+7 911 222 33 44",
 				"replicas": [
 					{
-						"message": "Я звоню по поводу вакансии тестировщика. Ваш директор Виктор Мельников попросил связаться с вами, чтобы вы смогли уточнить дни его присутствия в офисе.",
+						"message": "I am calling about the a tester position. Your director Victor Melnikov asked me to contact you so that you can tell me about the days of his presence in the office.",
 						"answers": [
 							{
-								"text": "Виктор будет в понедельник, среду и четверг с 10:00 до 18:00.",
+								"text": "Victor will be there on Monday, Wednesday and Thursday from 10:00 am to 6:00 pm.",
 								"correct": false
 							},
 							{
-								"text": "Почему вы не узнали расписание у Виктора?",
+								"text": "Why didn't you find out the schedule from Victor himself? ",
 								"correct": true
 							}
 						]
 					},
 					{
-						"message": "Во время нашего последнего разговора он не мог точно сказать свое расписание на неделю и сказал, что я могу узнать это через вас.",
+						"message": "During our last conversation, he couldn't exactly say his schedule for the week and said I could find this out from you.",
 						"answers": [
 							{
-								"text": "Оставьте свой контактный номер, с вами свяжется наш HR-менеджер.",
+								"text": "Leave your contact number and our HR manager will call you back.",
 								"correct": true
 							},
 							{
-								"text": "Хорошо, он будет в офисе в понедельник, среду и четверг с 10 до 18.",
+								"text": "OK, he will be in the office on Monday, Wednesday and Thursday from 10 am to 6 pm. ",
 								"correct": false
 							}
 						],
@@ -114,65 +114,65 @@
 		]
 	},
 	"dinner": {
-		"variants": "Варианты действий",
+		"variants": "You can",
 		"scripts": [
 			{
-				"message": "Вы менеджер по работе с клиентами компании Hacktory. Через час назначен важный звонок с потенциальным клиентом, поэтому на обед у вас есть ровно 60 минут.",
+				"message": "You are an account manager at Hacktory. -\tThe interactive quest for time begins. An important call with a potential client is scheduled in an hour, so you have exactly 60 minutes for lunch.",
 				"nextStage": "office",
 				"answers": [
 					{
-						"text": "Дальше",
+						"text": "Next",
 						"correct": true
 					}
 				]
 			},
 			{
-				"message": "Перед обедом вы работали с распечатанными документами. Их можно оставить на столе или собрать в папку и убрать в шкаф, который закрывается на ключ. На то, чтобы убрать документы уйдет 5 минут.",
+				"message": "You have been working with printed documents before lunch. You can leave them on the desk or put them in a folder and put them away in a cabinet that locks. It takes five minutes to put the documents away.",
 				"nextStage": "office",
 				"answers": [
 					{
-						"text": "Положить в шкаф (5 минут)",
+						"text": "Put them away in a cabinet (5 minutes)",
 						"correct": true,
 						"timediff": 300
 					},
 					{
-						"text": "Оставить на столе",
+						"text": "Leave the documents on desk",
 						"correct": false
 					}
 				]
 			},
 			{
-				"message": "Выходя из офисного помещения, вы встречаете человека с коробками. Предположительно, это курьер. Вы можете сэкономить время и придержать для него дверь. Или же сопроводить его до офис-менеджера.",
+				"message": "As you leave the office, you meet a man with boxes. Presumably, it is a delivery man. You can save time and hold the door for him. Or you can accompany him to the office manager.",
 				"nextStage": "cafe",
 				"answers": [
 					{
-						"text": "Проводить курьера к офис-менеджеру (5 минут)",
+						"text": "Accompany the delivery man to the office (5 minutes)",
 						"correct": true,
 						"timediff": 300
 					},
 					{
-						"text": "Молча придержать дверь",
+						"text": "Silently hold the door",
 						"correct": true
 					}
 				]
 			},
 			{
-				"message": "Выйдя из офиса, вы замечаете сообщение от своего руководителя, но его не открыть из-за плохого интернет-соединения. Вы можете подключиться к незащищенной сети соседнего кафе без пароля или узнать пароль от защищенной сети Wi-Fi местной столовой.",
+				"message": "Out of the office, you notice a message from your manager, but you can't open it because of a poor internet connection. You may connect to a neighboring café's non-secured network without a password, or find out the password to the local canteen's secured Wi-Fi network.",
 				"nextStage": "cafe",
 				"answers": [
 					{
-						"text": "Узнать пароль от защищенной сети Wi-Fi ( - 5 мин)",
+						"text": "Find out the password to a secured Wi-Fi network (5 minutes)",
 						"correct": true,
 						"timediff": 300
 					},
 					{
-						"text": "Подключиться к сети без пароля",
+						"text": "Connect to the network without the password",
 						"correct": false
 					}
 				]
 			},
 			{
-				"message": "Время обеда!",
+				"message": "Have a lunch!",
 				"nextStage": "cafe",
 				"answers": [
 					{
@@ -183,16 +183,16 @@
 				]
 			},
 			{
-				"message": "Во время обеда к вам подсаживается мужчина и представляется новым сотрудником вашей компании. Вы первый из коллег, с кем ему удалось познакомиться. Он хочет больше узнать о компании и сотрудниках.",
+				"message": "During lunch, a man sits down with you and introduces himself as a new employee of your company. You are the first colleague he has met. He wants to know more about the company and the employees.",
 				"nextStage": "office",
 				"answers": [
 					{
-						"text": "Познакомиться и рассказать о компании (- 15 мин)",
+						"text": "Introduce yourself and talk about the company (15 minutes)",
 						"correct": false,
 						"timediff": 600
 					},
 					{
-						"text": "Отложить разговор на следующий раз",
+						"text": "Postpone the conversation until another time",
 						"correct": true
 					}
 				]
@@ -200,53 +200,53 @@
 		]
 	},
 	"checkpoint": {
-		"variants": "Варианты действий",
+		"variants": "Response options",
 		"scripts": [
 			[
 				{
-					"message": "Офис-менеджер попросил вас подменить его сегодня. Определите, кто пытается проникнуть внутрь вашей компании – атакующий или приглашенный гость.",
+					"message": "The office manager has asked you to replace him today. Identify who is trying to infiltrate your company — the adversary or the invited guest.",
 					"answers": [
 						{
-							"text": "Дальше",
+							"text": "Next",
 							"correct": true
 						}
 					]
 				},
 				{
-					"message": "Здравствуйте! Я стажер, забыл у вас свою сумку.",
+					"message": "Hello! I'm an intern and I forgot my bag in the office",
 					"answers": [
 						{
-							"text": "Назовите ваше имя и опишите сумку.",
+							"text": "Please, say your name and describe your bag.",
 							"correct": true
 						},
 						{
 							"isSkip": true,
-							"text": "Заходите, забирайте. Какая-то сумка лежит на столе на кухне.",
+							"text": "Come in and take your bag. There is one in the kitchen — maybe it is yours.",
 							"correct": false
 						}
 					]
 				},
 				{
-					"message": "Москвитин Виталий, я проходил стажировку в отделе аудита. Она черная с синими полосками и вышивкой по бокам.",
+					"message": "Moskvitin Vitaly, I was an interns in the audit department. It is black with blue stripes and embroidery on the sides.",
 					"answers": [
 						{
-							"text": "К сожалению, мы не находили потерянных вещей. Оставьте ваш контакт. Если найдем - сообщим.",
+							"text": "Unfortunately, we have not found any lost items. Leave your contact details. If we do, we'll let you know. ",
 							"correct": true,
 							"isSkip": true
 						},
 						{
 							"isSkip": true,
-							"text": "Проходите, все найденные вещи лежат в кладовке - помещение справа от кухни.",
+							"text": "Come in, all the things we’ve found are in the pantry — the room to the right of the kitchen.",
 							"correct": false
 						}
 					]
 				},
 				{
-					"message": "Для продолжения решите, впустить человека или нет.",
+					"message": "To continue, decide whether to let the person in or not.",
 					"answers": [
 						{
 							"isSkip": true,
-							"text": "Пустите человека в здание или откажите ему чтобы продолжить.",
+							"text": "Let the person into the building or call security to continue.",
 							"correct": true
 						}
 					]
@@ -256,26 +256,26 @@
 
 			[
 				{
-					"message": "Здравствуйте! Я к Марии Петровой, мне надо передать ей вещи. Я знаю, где ее рабочее место.",
+					"message": "Hello! I'm here to see Maria Petrova, I need to give her her things. I know where her workplace is.",
 					"answers": [
 						{
 							"isSkip": true,
-							"text": "Здравствуйте. Мария предупреждала о вашем визите. Я вас сопровожу.",
+							"text": "Hello. Maria warned me about your visit. I'll accompany you.",
 							"correct": true
 						},
 						{
 							"isSkip": true,
-							"text": "Хорошо, проходите.",
+							"text": "Ok, come in.",
 							"correct": false
 						}
 					]
 				},
 				{
-					"message": "Для продолжения решите, впустить человека или нет.",
+					"message": "To continue, decide whether to let the person in or not.",
 					"answers": [
 						{
 							"isSkip": true,
-							"text": "Пустите человека в здание или откажите ему чтобы продолжить.",
+							"text": "Let the person into the building or call security to continue.",
 							"correct": true
 						}
 					]
@@ -285,26 +285,26 @@
 
 			[
 				{
-					"message": "Здравствуйте! Я Евгений Прохоров, мы проводим проверку безопасности электропроводки в помещениях бизнес-центра, мне согласовали ее на сегодня. Могу я начать с серверной?",
+					"message": "Hello! I am Evgeniy Prokhorov, we are doing a safety inspection of the wiring in the business centre premises, it has been approved for today. Can I start with the server room?",
 					"answers": [
 						{
 							"isSkip": true,
-							"text": "Здравствуйте, вам по коридору и направо.",
+							"text": "Hello, it's down the corridor and to your right.",
 							"correct": false
 						},
 						{
 							"isSkip": true,
-							"text": "Здравствуйте. С кем вы ранее общались? Вас нет в списке, пропустить не могу.",
+							"text": "Hello. Who have you been in contact with before? You're not on the list, I can't let you in.",
 							"correct": true
 						}
 					]
 				},
 				{
-					"message": "Для продолжения решите, впустить человека или нет.",
+					"message": "To continue, decide whether to let the person in or not.",
 					"answers": [
 						{
 							"isSkip": true,
-							"text": "Пустите человека в здание или откажите ему чтобы продолжить.",
+							"text": "Let the person into the building or call security to continue.",
 							"correct": true
 						}
 					]
@@ -313,40 +313,40 @@
 
 			[
 				{
-					"message": "Привет, я ваш новый сотрудник Алексей Шевченко. Мне пропуск еще не выдали. Пропустите?",
+					"message": "Hi, I'm your new employee Alexei Shevchenko. I wasn’t given a pass yet. Can you let me in?",
 					"answers": [
 						{
 							"isSkip": true,
-							"text": "Проходите.",
+							"text": "Come in.",
 							"correct": false
 						},
 						{
-							"text": "Из какого вы отдела?",
+							"text": "What department are you from?",
 							"correct": true
 						}
 					]
 				},
 				{
-					"message": "Я из отдела продаж.",
+					"message": "Sales department.",
 					"answers": [
 						{
 							"isSkip": false,
-							"text": "Вас нет в списках сотрудников. Извините, но пропустить не могу.",
+							"text": "You're not on the staff list. I'm sorry, but I can't let you in.",
 							"correct": true
 						},
 						{
 							"isSkip": true,
-							"text": "Вижу вас в списке сотрудников. Покажите, пожалуйста, документ, удостоверяющий личность, и проходите.",
+							"text": "I see you on the staff list. Please show me your ID and come in.",
 							"correct": true
 						}
 					]
 				},
 				{
-					"message": "Для продолжения решите, впустить человека или нет.",
+					"message": "To continue, decide whether to let the person in or not.",
 					"answers": [
 						{
 							"isSkip": true,
-							"text": "Пустите человека в здание или откажите ему чтобы продолжить.",
+							"text": "Let the person into the building or call security to continue.",
 							"correct": true
 						}
 					]
@@ -355,25 +355,25 @@
 
 			[
 				{
-					"message": "Добрый день, я из доставки цветов. Ваши сотрудники попросили подготовить сюрприз для Натальи Кузьминой, сказали, что ее рабочее место справа у окна, попросили там оставить букет. Я могу пройти?",
+					"message": "Good afternoon, I am from the flower delivery service. Your staff asked me to prepare a surprise for Natalya Kuzmina, they said that her workplace is on the right by the window and asked me to leave the bouquet there. May I come in?",
 					"answers": [
 						{
 							"isSkip": true,
-							"text": "Да, только она сидит слева от переговорки. Проходите.",
+							"text": "Yes, you can. But her workplace is to the left of the conference room. Come in.",
 							"correct": false
 						},
 						{
-							"text": "Вы можете передать букет мне, и я поставлю его в вазу на ее рабочем месте.",
+							"text": "You can leave with me and I will put it in a vase at her workplace.",
 							"correct": true
 						}
 					]
 				},
 				{
-					"message": "Для продолжения решите, впустить человека или нет.",
+					"message": "To continue, decide whether to let the person in or not.",
 					"answers": [
 						{
 							"isSkip": true,
-							"text": "Пустите человека в здание или откажите ему чтобы продолжить.",
+							"text": "Let the person into the building or call security to continue.",
 							"correct": true
 						}
 					]

@@ -7,8 +7,8 @@
         "no_incoming": "You have no incoming calls"
     },
     "dinner": {
-        "good": "Congratulations! You have not fallen for the tricks of adversaries. Take your flag:",
-        "bad":"Your boss fined you for your unawareness. Now, all employees have to change their passwords.",
+        "good": "You haven't fallen for the tricks of the scammer in the canteen! Here is your FLAG.",
+        "bad":"You gave away company secrets to a scammer!",
         "flag": "flag_w@lkFl@gC0mpleted",
         "button": "Try again",
         "no_incoming": "Lunch is over!"
