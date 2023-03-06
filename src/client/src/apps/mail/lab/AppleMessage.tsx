@@ -16,7 +16,7 @@ const AppleMessage = () => {
 						following link:
 					</p>
 					<p>
-						<a>
+						<a href={'#'}>
 							https://appleid.apple.com/id67731955304?companyname=hacktory&activate=true&type=corporation
 						</a>
 					</p>
