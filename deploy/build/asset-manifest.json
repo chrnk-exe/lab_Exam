@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d78c1d3c.css",
-    "main.js": "/static/js/main.fa9347f7.js",
+    "main.js": "/static/js/main.cc291198.js",
     "static/media/skip.mov": "/static/media/skip.6c00e20170158598ab32.mov",
     "static/media/Handcuffs.mov": "/static/media/Handcuffs.be2ad701c1a4a56f78c3.mov",
     "static/media/guard.mov": "/static/media/guard.47759804df3c41ad1502.mov",
@@ -22,8 +22,8 @@
     "static/media/TikTok.eml": "/static/media/TikTok.e18d6c401e8fb8fb8a92.eml",
     "static/media/PDF_file_icon.svg": "/static/media/PDF_file_icon.d26385ca01a5ea34b438790bd86e4941.svg",
     "static/media/Microsoft.eml": "/static/media/Microsoft.5a6418cdcff72912c756.eml",
+    "static/media/Apple.eml": "/static/media/Apple.5a9bf43a88bc32a4e729.eml",
     "static/media/GitHub.eml": "/static/media/GitHub.ea9376fa50bb0414be31.eml",
-    "static/media/Apple.eml": "/static/media/Apple.d6d146a807282b809fdb.eml",
     "static/media/Amazon.eml": "/static/media/Amazon.bf4f381184c4b497d14c.eml",
     "static/media/Ozon.eml": "/static/media/Ozon.6af8bd818ccd99b0a382.eml",
     "static/media/XLS.svg": "/static/media/XLS.71610099b6235cf8a249034898e3a53f.svg",
@@ -46,10 +46,10 @@
     "static/media/russia.svg": "/static/media/russia.b41328698709cf180d8d19cd65d03050.svg",
     "static/media/Timeline.pptx": "/static/media/Timeline.31d6cfe0d16ae931b73c.pptx",
     "main.d78c1d3c.css.map": "/static/css/main.d78c1d3c.css.map",
-    "main.fa9347f7.js.map": "/static/js/main.fa9347f7.js.map"
+    "main.cc291198.js.map": "/static/js/main.cc291198.js.map"
   },
   "entrypoints": [
     "static/css/main.d78c1d3c.css",
-    "static/js/main.fa9347f7.js"
+    "static/js/main.cc291198.js"
   ]
 }

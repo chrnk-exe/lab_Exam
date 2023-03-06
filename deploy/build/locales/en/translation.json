@@ -64,10 +64,10 @@
             "notes": "Notes",
             "title": "Title",
             "body": "Body",
-            "snow_cleaner_title": "Snow removal",
-            "snow_cleaner_body": "At 10 a.m. Igor Valeryevich will come to clean the roof, we need to let him through the checkpoint!",
-            "random_title": "Lunch",
-            "random_body": "Today lunch will be 15 minutes later, a new batch of products is being delivered."
+            "snow_cleaner_title": "Visit",
+            "snow_cleaner_body": "A man will come to hand over Maria Petrova's things.",
+            "random_title": "BIRTHDAY!!!",
+            "random_body": "Today is Natalia Kuzmina birthday, we need to let in a person with a bouquet."
         },
         "talk_ended": "Call ended",
         "next_call": "You will be called in: ",
