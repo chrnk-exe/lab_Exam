@@ -131,7 +131,7 @@
 				"nextStage": "office",
 				"answers": [
 					{
-						"text": "Put them away in a cabinet (5 minutes)",
+						"text": "Put them away in a cabinet (-5 minutes)",
 						"correct": true,
 						"timediff": 300
 					},
@@ -146,7 +146,7 @@
 				"nextStage": "cafe",
 				"answers": [
 					{
-						"text": "Accompany the delivery man to the office (5 minutes)",
+						"text": "Accompany the delivery man to the office (-5 minutes)",
 						"correct": true,
 						"timediff": 300
 					},
@@ -161,7 +161,7 @@
 				"nextStage": "cafe",
 				"answers": [
 					{
-						"text": "Find out the password to a secured Wi-Fi network (5 minutes)",
+						"text": "Find out the password to a secured Wi-Fi network (-5 minutes)",
 						"correct": true,
 						"timediff": 300
 					},
@@ -176,7 +176,7 @@
 				"nextStage": "cafe",
 				"answers": [
 					{
-						"text": "Пообедать",
+						"text": "Lunch",
 						"correct": true,
 						"timediff": 1800
 					}
@@ -187,7 +187,7 @@
 				"nextStage": "office",
 				"answers": [
 					{
-						"text": "Introduce yourself and talk about the company (15 minutes)",
+						"text": "Introduce yourself and talk about the company (-15 minutes)",
 						"correct": false,
 						"timediff": 600
 					},
@@ -231,13 +231,22 @@
 					"answers": [
 						{
 							"text": "Unfortunately, we have not found any lost items. Leave your contact details. If we do, we'll let you know. ",
-							"correct": true,
-							"isSkip": true
+							"correct": true
 						},
 						{
 							"isSkip": true,
 							"text": "Come in, all the things we’ve found are in the pantry — the room to the right of the kitchen.",
 							"correct": false
+						}
+					]
+				},
+				{
+					"message": "I really need a bag!!! Whether you like it or not, I'll go through anyway and find her myself, let me in quickly!!!",
+					"answers": [
+						{
+							"text": "Wait a minute",
+							"correct": true,
+							"isSkip": false
 						}
 					]
 				},
@@ -293,8 +302,17 @@
 							"correct": false
 						},
 						{
-							"isSkip": true,
 							"text": "Hello. Who have you been in contact with before? You're not on the list, I can't let you in.",
+							"correct": true
+						}
+					]
+				},
+				{
+					"message": "What difference does it make who I talked to? I only have time for this today! Otherwise, I will have to write a complaint to your director!",
+					"answers": [
+						{
+							"isSkip": false,
+							"text": "Wait a minute.",
 							"correct": true
 						}
 					]
@@ -330,13 +348,22 @@
 					"message": "Sales department.",
 					"answers": [
 						{
-							"isSkip": false,
 							"text": "You're not on the staff list. I'm sorry, but I can't let you in.",
 							"correct": true
 						},
 						{
 							"isSkip": true,
 							"text": "I see you on the staff list. Please show me your ID and come in.",
+							"correct": false
+						}
+					]
+				},
+				{
+					"message": "So what? Will you sell instead of me? And we really have a plan! Let me through quickly..",
+					"answers": [
+						{
+							"isSkip": false,
+							"text": "Wait a minute.",
 							"correct": true
 						}
 					]
@@ -360,11 +387,11 @@
 						{
 							"isSkip": true,
 							"text": "Yes, you can. But her workplace is to the left of the conference room. Come in.",
-							"correct": false
+							"correct": true
 						},
 						{
 							"text": "You can leave with me and I will put it in a vase at her workplace.",
-							"correct": true
+							"correct": false
 						}
 					]
 				},

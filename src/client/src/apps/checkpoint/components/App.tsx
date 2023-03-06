@@ -4,7 +4,6 @@ import Scripts from './Scripts';
 import {useAppDispatch, useAppSelector} from '../store/hooks';
 import {zeroReplica, nextStep, incrementResult, decrementResult} from '../store/slices/scriptSlice';
 import { useTranslation } from 'react-i18next';
-// import workingVideo from '../assets/1.mp4';
 import guardVideo from '../assets/guard.mov';
 import greenVideo from '../assets/skip.mov';
 import redVideo from '../assets/Handcuffs.mov';
@@ -25,7 +24,7 @@ const App = () => {
 	const [openVideo, setOpenVideo] = useState(false);
 	const handleOpenVideo = (skip: boolean) => {
 		// Маска кого впускать можно, а кого нет!
-		const mask = [false, true, false, true, false];
+		const mask = [false, true, false, false, true];
 		setIsSkipped(skip);
 		dispatch(zeroReplica());
 		dispatch(nextStep());

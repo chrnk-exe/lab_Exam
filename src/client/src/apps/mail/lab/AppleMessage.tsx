@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classes from './styles/Apple.module.sass';
-import WarningAlert from './WarningAlert';
 
 const AppleMessage = () => {
-	const [warning, setWarning] = useState(false);
 
 	return (
 		<div className={classes.message}>
@@ -18,19 +16,10 @@ const AppleMessage = () => {
 						following link:
 					</p>
 					<p>
-						<a
-							onClick={e => {
-								e.preventDefault();
-								setWarning(true);
-							}}
-							className={classes.activatinglink}
-							href="http://evilattacker.tk">
+						<a>
 							https://appleid.apple.com/id67731955304?companyname=hacktory&activate=true&type=corporation
 						</a>
 					</p>
-					{warning && (
-						<WarningAlert offFunction={() => setWarning(false)} />
-					)}
 					<p>
 						By clicking on this link, you agree to all the terms of
 						use of Apple products.
