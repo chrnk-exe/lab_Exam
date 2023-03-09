@@ -60,7 +60,7 @@ export default [
 		id: 3,
 		subject: 'You need to confirm the email address for the Apple ID',
 		from: 'Apple',
-		sender: 'no-reply@youtube.com',
+		sender: 'no-reply@apple.com',
 		to: 'admin@hacktory.com',
 
 		read: false,

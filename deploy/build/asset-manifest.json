@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d78c1d3c.css",
-    "main.js": "/static/js/main.d2529c50.js",
+    "main.js": "/static/js/main.e6447c82.js",
     "static/media/skip.mov": "/static/media/skip.6c00e20170158598ab32.mov",
     "static/media/Handcuffs.mov": "/static/media/Handcuffs.be2ad701c1a4a56f78c3.mov",
     "static/media/guard.mov": "/static/media/guard.47759804df3c41ad1502.mov",
@@ -46,10 +46,10 @@
     "static/media/russia.svg": "/static/media/russia.b41328698709cf180d8d19cd65d03050.svg",
     "static/media/Timeline.pptx": "/static/media/Timeline.31d6cfe0d16ae931b73c.pptx",
     "main.d78c1d3c.css.map": "/static/css/main.d78c1d3c.css.map",
-    "main.d2529c50.js.map": "/static/js/main.d2529c50.js.map"
+    "main.e6447c82.js.map": "/static/js/main.e6447c82.js.map"
   },
   "entrypoints": [
     "static/css/main.d78c1d3c.css",
-    "static/js/main.d2529c50.js"
+    "static/js/main.e6447c82.js"
   ]
 }

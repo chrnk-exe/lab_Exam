@@ -14,7 +14,7 @@ const initialState: {
 };
 
 export const scriptSlice = createSlice({
-	name: 'script',
+	name: 'scriptCheckpoint',
 	initialState,
 	reducers: {
 		incrementResult: (state) => {

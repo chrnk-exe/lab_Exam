@@ -20,6 +20,8 @@ const Quest = () => {
 	const step = useAppSelector(state => state.scriptCheckpoint.step);
 	const replicaStep = useAppSelector(state => state.scriptCheckpoint.replica);
 	const navigate = useNavigate();
+
+	console.log(step, replicaStep);
 	const nextReplica = () => dispatch(nr());
 
 	const answerHandler = (answerIsTrue: boolean, isSkip?: boolean) => {

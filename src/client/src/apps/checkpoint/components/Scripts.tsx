@@ -14,11 +14,8 @@ const Scripts: FC<Props> = ({
 	openModal,
 	showFlag,
 }) => {
-	// const { t } = useTranslation('flag');
 	const step = useAppSelector(state => state.scriptCheckpoint.step);
 	const result = useAppSelector(state => state.scriptCheckpoint.result);
-
-	// const handleFinish = () => setFinish(true);
 
 	useEffect(() => {
 		if (step === 6) {
@@ -29,7 +26,6 @@ const Scripts: FC<Props> = ({
 		}
 	}, [step, result]);
 
-	// if (step !== 8)
 	return (
 		<Box
 			display="flex"
@@ -48,27 +44,7 @@ const Scripts: FC<Props> = ({
 			<Quest/>
 		</Box>
 	);
-	// else
-	// 	return (
-	// 		<Box
-	// 			display="flex"
-	// 			flexDirection="column"
-	// 			justifyContent="space-evenly"
-	// 			alignItems="center"
-	// 			sx={{
-	// 				widht: '90%',
-	// 				height: '94%',
-	// 				textAlign: 'center',
-	// 				bgcolor: 'primary.light',
-	// 				borderRadius: '20px',
-	// 				flexGrow: 1,
-	// 				mx: 3,
-	// 			}}>
-	// 			<Typography variant="h5" sx={{ color: '#FFFFF1' }}>
-	// 				{t('no_incoming')}
-	// 			</Typography>
-	// 		</Box>
-	// 	);
+
 };
 
 export default Scripts;

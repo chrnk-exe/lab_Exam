@@ -5,7 +5,7 @@ export const initialState = (JSON.parse(
 ) as boolean) || false;
 
 export const labSlice = createSlice({
-	name: 'lab',
+	name: 'labDinner',
 	initialState,
 	reducers: {
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars

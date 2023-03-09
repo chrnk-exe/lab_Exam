@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from '../styles/App.module.sass';
 import { useAppSelector } from '../store/hooks';
 import MessageCount from './MessageCount';
 
 import { Outlet, useNavigate } from 'react-router';
-import { Paper } from '@mui/material';
+import {Box, Button, Fade, Modal, Paper, Typography} from '@mui/material';
 import Header from './Header';
 
 import List from '@mui/material/List';
@@ -38,26 +38,26 @@ function arrayEquals(a: Array<number>, b: Array<number>) {
 function App() {
 	const messages = useAppSelector(state => state.messagesFiles);
 	const [selected, setSelected] = useState(1);
+	const [showFlag, setShowFlag] = useState(false);
+	const [open, setOpen] = useState(false);
+	const handleClose = () => setOpen(false);
+	const handleOpen = () => setOpen(true);
 	const navigate = useNavigate();
 
-	const [isAlerted, setAlert] = useState(false);
-	if(messages.filter(message => message.favorite).length +
-		messages.filter(message => message.type === 'trash').length === 5)
-	{
-		// id 2 и id 5 - id честных писем
-		const favoriteMessages = messages
-			.filter(message => message.favorite)
-			.map(message => message.id);
-		if(arrayEquals(favoriteMessages, [2, 5]) || arrayEquals(favoriteMessages, [5, 2])) {
-			if(!isAlerted) {
-				alert('Your flag: flag_D@nger0usF1lesDetect3d');
-				setAlert(true);
-			}
-		} else {
-			alert('You made a mistake, try again!');
-			window.location.reload();
+	useEffect(() => {
+		if(messages.filter(message => message.favorite).length +
+			messages.filter(message => message.type === 'trash').length === 5)
+		{
+			// id 2 и id 5 - id честных писем
+			const favoriteMessages = messages
+				.filter(message => message.favorite)
+				.map(message => message.id);
+			setShowFlag(arrayEquals(favoriteMessages, [2, 5]) || arrayEquals(favoriteMessages, [5, 2]));
+			handleOpen();
 		}
-	}
+	}, [messages]);
+
+
 
 	const Buttons = [
 		// {action: AppActions.Compose, icon: <CreateIcon />, text: 'Compose'},
@@ -126,6 +126,59 @@ function App() {
 					<Outlet />
 				</Paper>
 			</main>
+
+			<Modal open={open} onClose={handleClose}>
+				<Fade in={open}>
+					<Box
+						display="flex"
+						flexDirection="column"
+						justifyContent="center"
+						alignItems="flexStart"
+						sx={{
+							position: 'absolute' as const,
+							top: '50%',
+							left: '50%',
+							transform: 'translate(-50%, -50%)',
+							width: 400,
+							color: !showFlag ? '#FFFFF1' : '#000',
+							bgcolor: showFlag
+								? 'background.paper'
+								: '#800000',
+							border: '2px solid #000',
+							boxShadow: 24,
+							p: 4,
+						}}>
+						<Typography
+							id="transition-modal-title"
+							variant="h6"
+							component="h2"
+							sx={
+								!showFlag
+									? {
+										textAlign: 'center',
+										mb: 2,
+										// eslint-disable-next-line no-mixed-spaces-and-tabs
+									}
+									: undefined
+							}>
+							{showFlag ? 'Your flag: flag_D@nger0usF1lesDetect3d' : 'You made a mistake, try again!'}
+						</Typography>
+						{!showFlag && (
+							<Button
+								variant="outlined"
+								sx={{
+									alignSelf: 'center',
+									borderColor: '#FFFFF1',
+									color: '#FFFFF1',
+									'&:hover': { borderColor: '#FFFFF1' },
+								}}
+								onClick={() => window.location.reload()}>
+								{'Try again.'}
+							</Button>
+						)}
+					</Box>
+				</Fade>
+			</Modal>
 		</div>
 	);
 }

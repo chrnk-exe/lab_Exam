@@ -12,7 +12,7 @@ const initialState: {
 };
 
 export const scriptSlice = createSlice({
-	name: 'script2',
+	name: 'scriptDinner',
 	initialState,
 	reducers: {
 		incrementResult: (state) => {

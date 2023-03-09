@@ -8,13 +8,7 @@ import { useTranslation } from 'react-i18next';
 const Finish = () => {
 	const { t } = useTranslation('translation', {keyPrefix: 'checkpoint'});
 
-	// const onClickAway = () => {
-	// 	nextStep();
-	// 	handleCallOn();
-	// };
-
 	return (
-	// <ClickAwayListener onClickAway={onClickAway}>
 		<Box
 			display="flex"
 			flexDirection="column"
@@ -25,7 +19,6 @@ const Finish = () => {
 				{t('The_guests_are_over')}
 			</Typography>
 		</Box>
-	// </ClickAwayListener>
 	);
 };
 

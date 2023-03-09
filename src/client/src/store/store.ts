@@ -1,5 +1,4 @@
 import { configureStore, ThunkAction, Action, getDefaultMiddleware } from '@reduxjs/toolkit';
-import appSlice from './slices/appSlice';
 
 import userReducer from '../apps/mail/store/slices/userSlice';
 import messagesReducer from '../apps/mail/store/slices/messageSlice';
@@ -12,14 +11,12 @@ import scriptVishingReducer from '../apps/vishing/store/slices/scriptSlice';
 
 import labDinnerReducer from '../apps/dinner/store/slices/labSlice';
 import scriptDinnerReducer from '../apps/dinner/store/slices/scriptSlice';
-import timerDinnerReducer from './slices/timerSlice';
 
 import labCheckpointReducer from '../apps/checkpoint/store/slices/labSlice';
 import scriptCheckpointReducer from '../apps/checkpoint/store/slices/scriptSlice';
 
 export const store = configureStore({
 	reducer: {
-		app: appSlice,
 
 		user: userReducer,
 		messages: messagesReducer,
@@ -32,7 +29,6 @@ export const store = configureStore({
 
 		labDinner: labDinnerReducer,
 		scriptDinner: scriptDinnerReducer,
-		timerDinner:timerDinnerReducer,
 
 		labCheckpoint: labCheckpointReducer,
 		scriptCheckpoint: scriptCheckpointReducer

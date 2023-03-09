@@ -17,8 +17,7 @@ const App = () => {
 	const handleClose = () => setOpen(false);
 
 	const dispatch = useAppDispatch();
-	const step = useAppSelector(state => state.scriptCheckpoint.step);
-	const currentResult = useAppSelector(state => state.scriptCheckpoint.currentResult);
+	const {step, currentResult} = useAppSelector(state => state.scriptCheckpoint);
 
 	const [isSkipped, setIsSkipped] = useState<boolean>(true);
 	const [openVideo, setOpenVideo] = useState(false);
